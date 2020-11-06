@@ -5,7 +5,7 @@ The Essentials Workers webpage provides an overview of data regarding essential 
 The webpage uses data collected from the United States Census Bureau and the U.S. Bureau of Economic Analysis (BEA). Python and R were used to perform ETL operations on the data before use on the webpage. This repository features an abridged version of the code base and therefore does not feature the scripts used for the ETL process, refer to the original repository to view said scripts: https://github.com/stlrda/essential-workers
 
 ## Key Technology (Front End)
-The webpage was developed using the React.js library, is fully responsive, and utlizes CSS frameworks such as Material UI, mdbbootstrap, and Mapbox.GL.
+The responsive webpage was developed using the React.js library and utilizes CSS frameworks such as Material UI, mdbbootstrap, and Mapbox.GL.
 
 ## Demonstration (Animated)
 
