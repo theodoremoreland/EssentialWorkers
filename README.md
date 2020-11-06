@@ -7,7 +7,18 @@ The webpage uses data collected from the United States Census Bureau and the U.S
 ## Key Technology (Front End)
 The webpage was developed using the React.js library, is fully responsive, and utlizes CSS frameworks such as Material UI, mdbbootstrap, and Mapbox.GL.
 
-## Demonstration
+## Demonstration (Animated)
+
+### Map
+<img src="presentation/1.gif" width="600">
+
+### Table
+<img src="presentation/2.gif" width="600">
+
+### Responsiveness Preview
+<img src="presentation/3.gif" width="600">
+
+## Demonstration (Still Images)
 
 ### Hero Image
 <img src="presentation/1.PNG" width="900">
