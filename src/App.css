@@ -1,0 +1,136 @@
+@font-face {
+  font-family: hero;
+  src: url('./fonts/Comfortaa-Bold.ttf');
+}
+
+@font-face {
+  font-family: body;
+  src: url('./fonts/SourceSansPro-Light.ttf');
+}
+
+@font-face {
+  font-family: footer;
+  src: url('./fonts/OpenSans-Light.ttf');
+}
+
+a:link {
+  color: rgb(0, 163, 152);
+  
+}
+
+a:visited {
+  text-decoration: underline;
+  color: rgb(0, 146, 136);
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+main {
+  background-color: #f6f8fa;
+  margin: 0;
+  padding-top: 25%;
+}
+
+footer {
+  margin: 0;
+  padding-top: 25%;
+  margin-bottom: 0%;
+}
+
+p#intro, p#segway, p#map-summary, p#table-summary {
+  font-family: body;
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+}
+
+p#intro {
+  padding-top: 0%;
+  margin-top: -25%;
+}
+
+p#map-summary {
+  margin-top: 3%;
+}
+
+p#segway {
+  margin-top: 0px;
+  padding-top: 1em;
+}
+
+p#groupings {
+  font-family: footer;
+  font-size: 1.5vw;
+  margin-top: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+p#table-summary {
+  margin-top: 3%;
+}
+
+
+@media screen and (min-width: 2181px) {
+  p#intro, p#segway, p#map-summary, p#table-summary  {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 2180px) {
+  p#intro, p#segway, p#map-summary, p#table-summary  {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+
+  p#intro, p#segway, p#map-summary, p#table-summary  {
+    font-size: 1.5em;
+  }
+  
+  p#groupings {
+    font-size: 1.3vw;
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  p#intro, p#segway, p#map-summary, p#table-summary  {
+    font-size: 3vw;
+  }
+  
+  p#groupings {
+    font-size: 1.9vw;
+  }
+
+}
+
+
+@media screen and (max-width: 640px) {
+  p#intro, p#segway, p#map-summary, p#table-summary  {
+    font-size: 5vw;
+  }
+  
+  p#groupings {
+    font-size: 3vw;
+  }
+
+}
