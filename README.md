@@ -7,43 +7,43 @@ The webpage uses data collected from the United States Census Bureau and the U.S
 ## Key Technology (Front End)
 The responsive webpage was developed using the React.js library and utilizes CSS frameworks such as Material UI, mdbbootstrap, and Mapbox.GL.
 
-## Demonstration (Animated)
+# Demonstration (Animated)
 
-### Map
+## Map
 <img src="presentation/1.gif" width="600">
 
-### Table
+## Table
 <img src="presentation/2.gif" width="600">
 
-### Responsiveness Preview
+## Responsiveness Preview
 <img src="presentation/3.gif" width="600">
 
-## Demonstration (Still Images)
+# Demonstration (Still Images)
 
-### Hero Image
+## Hero Image
 <img src="presentation/1.PNG" width="900">
 
-### Map View (Missouri - Unemployment Rate)
+## Map View (Missouri - Unemployment Rate)
 <img src="presentation/2.PNG" width="900">
 
-### Map View (Illinous - Unemployment Rate)
+## Map View (Illinous - Unemployment Rate)
 <img src="presentation/3.PNG" width="900">
 
-### Map View (Saint Louis - Median Income)
+## Map View (Saint Louis - Median Income)
 <img src="presentation/4.PNG" width="900">
 
-### Table (Saint Louis)
+## Table (Saint Louis)
 <img src="presentation/5.PNG" width="900">
 
-### Table (Missouri)
+## Table (Missouri)
 <img src="presentation/6.PNG" width="900">
 
-### Table (Illinois)
+## Table (Illinois)
 <img src="presentation/7.PNG" width="900">
 
-### Credits / Footer
+## Credits / Footer
 <img src="presentation/8.PNG" width="900">
 
-### Mobile Preview
+## Mobile Preview
 <img src="presentation/9.PNG" width="900">
 
