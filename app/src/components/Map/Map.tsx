@@ -5,6 +5,8 @@ import {
 	useLayoutEffect,
 	useState,
 	ChangeEvent,
+	useMemo,
+	ReactElement,
 } from "react";
 import ReactDOM from "react-dom";
 
@@ -12,7 +14,7 @@ import ReactDOM from "react-dom";
 import Hidden from "@mui/material/Hidden";
 
 // Mapbox
-import mapboxgl from "mapbox-gl";
+import mapboxgl, { GeoJSONFeature, Map, Popup } from "mapbox-gl";
 
 // Custom Components
 import { FilterLarge, FilterSmall } from "./Filter";
@@ -170,41 +172,56 @@ interface Props {
 	selectedTableName: string;
 }
 
-const Map = (props: Props) => {
+const MapWrapper = (props: Props): ReactElement => {
 	const { selectedTableName } = props;
 
-	const firstUpdate = useRef(true);
-	const secondUpdate = useRef(true);
+	const firstUpdate = useRef<boolean>(true);
+	const secondUpdate = useRef<boolean>(true);
 
-	const mapContainerRef = useRef(null);
-	const [mapRef, setMapRef] = useState(null);
-	const tooltipRef = useRef(new mapboxgl.Popup({ offset: 15 }));
-	const [radio, setRadio] = useState("GDP (Thousands of dollars)");
+	const mapContainerRef = useRef<HTMLDivElement>(null);
+	const [mapRef, setMapRef] = useState<Map | null>(null);
+	const tooltipRef = useRef<Popup>(new mapboxgl.Popup({ offset: 15 }));
+	const [radio, setRadio] = useState<string>("GDP (Thousands of dollars)");
 
-	const [lng, setLng] = useState(mapViews[selectedTableName].center[0]);
-	const [lat, setLat] = useState(mapViews[selectedTableName].center[1]);
-	const [zoom, setZoom] = useState(mapViews[selectedTableName].zoom);
+	const [lng, setLng] = useState<number>(mapViews[selectedTableName].center[0]);
+	const [lat, setLat] = useState<number>(mapViews[selectedTableName].center[1]);
+	const [zoom, setZoom] = useState<number>(mapViews[selectedTableName].zoom);
 
-	const dataLayer = {
-		id: "root-layer",
-		type: "fill",
-		source: "source-data",
+	const dataLayer: {
+		id: string;
+		type: "fill";
+		source: string;
 		paint: {
 			"fill-color": {
-				property: radio,
-				stops: legendData[radio].stops,
+				property: string;
+				stops: [number, string][];
+			};
+			"fill-opacity": number;
+		};
+	} = useMemo(() => {
+		return {
+			id: "root-layer",
+			type: "fill",
+			source: "source-data",
+			paint: {
+				"fill-color": {
+					property: radio,
+					stops: legendData[radio].stops,
+				},
+				"fill-opacity": 0.8,
 			},
-			"fill-opacity": 0.8,
-		},
-	};
+		};
+	}, [radio]);
 
-	const updateRadio = (event: ChangeEvent<HTMLInputElement>) => {
+	const updateRadio = (event: ChangeEvent<HTMLInputElement>): void => {
 		setRadio(event.target.value);
 	};
 
 	// Initialize map when component mounts
 	useEffect(() => {
-		const map = new mapboxgl.Map({
+		if (mapContainerRef.current === null) return;
+
+		const map: Map = new mapboxgl.Map({
 			container: mapContainerRef.current,
 			style: "mapbox://styles/mapbox/light-v10",
 			center: [lng, lat],
@@ -216,14 +233,18 @@ const Map = (props: Props) => {
 		});
 
 		map.on("move", () => {
-			setLng(map.getCenter().lng.toFixed(4));
-			setLat(map.getCenter().lat.toFixed(4));
-			setZoom(map.getZoom().toFixed(2));
+			const _lng: string = map.getCenter().lng.toFixed(4);
+			const _lat: string = map.getCenter().lat.toFixed(4);
+			const _zoom: string = map.getZoom().toFixed(2);
+
+			setLng(parseInt(_lng));
+			setLat(parseInt(_lat));
+			setZoom(parseInt(_zoom));
 		});
 
 		// change cursor to pointer when user hovers over a clickable feature
 		map.on("mouseenter", "root-layer", (e) => {
-			if (e.features.length) {
+			if (e.features?.length && e.features.length > 0) {
 				map.getCanvas().style.cursor = "pointer";
 			}
 		});
@@ -235,13 +256,13 @@ const Map = (props: Props) => {
 
 		// add tooltip when users mouse move over a point
 		map.on("click", "root-layer", (e) => {
-			const features = map.queryRenderedFeatures(e.point);
+			const features: GeoJSONFeature[] = map.queryRenderedFeatures(e.point);
 
 			if (features.length) {
-				const feature = features[0];
-
+				const feature: GeoJSONFeature = features[0];
 				// Create tooltip node
-				const tooltipNode = document.createElement("div");
+				const tooltipNode: HTMLDivElement = document.createElement("div");
+
 				ReactDOM.render(<Tooltip feature={feature} />, tooltipNode);
 
 				// Set tooltip on map
@@ -252,40 +273,43 @@ const Map = (props: Props) => {
 			}
 		});
 
-		map.on("load", function () {
+		map.on("load", () => {
 			map.addSource("source-data", { type: "geojson", data: mo_counties });
 			map.addLayer(dataLayer);
 		});
 
 		setMapRef(map);
 
-		// Clean up on unmount
 		return () => map.remove();
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [dataLayer, lat, lng, selectedTableName, zoom]);
 
 	// Updates Geography
 	useLayoutEffect(() => {
 		if (firstUpdate.current) {
 			firstUpdate.current = false;
+
 			return;
-		} else {
+		} else if (mapRef) {
 			mapRef.easeTo(mapViews[selectedTableName]);
-			mapRef.getSource("source-data").setData(data[selectedTableName]);
+			(mapRef.getSource("source-data") as mapboxgl.GeoJSONSource)?.setData(
+				data[selectedTableName]
+			);
 		}
-	}, [selectedTableName]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [selectedTableName, mapRef]);
 
 	// Updates Measure
 	useLayoutEffect(() => {
 		if (secondUpdate.current) {
 			secondUpdate.current = false;
+
 			return;
-		} else {
+		} else if (mapRef) {
 			mapRef.setPaintProperty("root-layer", "fill-color", {
 				property: radio,
 				stops: legendData[radio].stops,
 			});
 		}
-	}, [radio]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [radio, mapRef]);
 
 	return (
 		<>
@@ -293,20 +317,16 @@ const Map = (props: Props) => {
 			<Hidden lgUp>
 				<FilterSmall radio={radio} updateRadio={updateRadio} />
 			</Hidden>
-
 			<section id="map-section">
 				<Hidden only={["xs", "sm", "md"]}>
 					{/* Filter (atop map) */}
 					<FilterLarge radio={radio} updateRadio={updateRadio} />
-
 					{/* Legend (atop map) */}
 					<LegendLarge legendObj={legendData[radio]} />
 				</Hidden>
-
 				{/* Map */}
 				<div className="map-container" ref={mapContainerRef} />
 			</section>
-
 			{/* Legend (below map) */}
 			<Hidden lgUp>
 				<LegendSmall legendObj={legendData[radio]} />
@@ -315,4 +335,4 @@ const Map = (props: Props) => {
 	);
 };
 
-export default Map;
+export default MapWrapper;

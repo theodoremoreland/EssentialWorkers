@@ -41,16 +41,15 @@ const App = (): ReactElement => {
 		"Saint Louis": { rowsByCategory: createRowsByCategory(stl_json) },
 	};
 
-	const [selectedTableName, setSelectedTableName] = useState("Missouri");
+	const [selectedTableName, setSelectedTableName] =
+		useState<string>("Missouri");
 
 	return (
 		<Grid container>
 			<Navbar />
-
 			<Grid item md={12}>
 				<Hero />
 			</Grid>
-
 			<Grid container component="main">
 				<Hidden only={["xs", "sm", "md"]}>
 					<Grid item lg={3} xl={3}>
@@ -61,7 +60,6 @@ const App = (): ReactElement => {
 						/>
 					</Grid>
 				</Hidden>
-
 				<Grid item component="section" sm={12} md={12} lg={9} xl={9}>
 					<Hidden lgUp>
 						<StaticControlPanel
@@ -70,7 +68,6 @@ const App = (): ReactElement => {
 							setTableView={setSelectedTableName}
 						/>
 					</Hidden>
-
 					<Typography variant="body1" id="intro">
 						Essential workers are shouldering the responsibility of providing
 						fundamental products and services during the COVID-19 pandemic all
@@ -79,16 +76,13 @@ const App = (): ReactElement => {
 						economic climate surrounding more than 2,000,000 essential workers
 						across Missouri and Illinois.
 					</Typography>
-
 					<Typography variant="body1" id="map-summary">
 						The interactive map below features county level data on essential
 						workers across five measures. You are currently viewing data for{" "}
 						{selectedTableName}. In {selectedTableName},{" "}
 						{map_summary[selectedTableName]}
 					</Typography>
-
 					<Map selectedTableName={selectedTableName} />
-
 					<Typography variant="body1" id="segway">
 						The data table below details characteristics of essential workers by
 						overall quantity and percentage, generalized into six groups. In
@@ -101,7 +95,6 @@ const App = (): ReactElement => {
 						. Essential industry groups feature various, more specific
 						industries, each classified by the Census Bureau’s Industry Codes:
 					</Typography>
-
 					<div id="groupings">
 						<ul>
 							<li>
@@ -140,11 +133,9 @@ const App = (): ReactElement => {
 							</li>
 						</ul>
 					</div>
-
 					<Typography variant="body1" id="table-summary">
 						You are currently viewing data for {selectedTableName}.
 					</Typography>
-
 					<ScrollingTable
 						tableData={{
 							columns: [
@@ -203,7 +194,6 @@ const App = (): ReactElement => {
 						}}
 					/>
 				</Grid>
-
 				<Grid item component="section" sm={12} md={12} lg={12} xl={12}>
 					<Footer />
 				</Grid>
