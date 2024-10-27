@@ -4,23 +4,11 @@ import React from "react";
 import "./StaticControlPanel.css";
 
 // Material UI
-import { makeStyles } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
-const useStyles = makeStyles((theme) => ({
-	controls: {
-		display: "flex",
-		alignItems: "center",
-		paddingLeft: theme.spacing(1),
-		paddingBottom: theme.spacing(1),
-	},
-}));
-
 function StaticControlPanel(props) {
-	const classes = useStyles();
-
 	const { tableNames, currentView, setTableView } = props;
 	const [tableName, setTableName] = React.useState(currentView);
 
@@ -45,7 +33,15 @@ function StaticControlPanel(props) {
 
 	return (
 		<section className="static-controls-container">
-			<div id="static-controls" className={classes.controls}>
+			<div
+				id="static-controls"
+				style={{
+					display: "flex",
+					alignItems: "center",
+					paddingLeft: 8,
+					paddingBottom: 8,
+				}}
+			>
 				<IconButton
 					aria-label="previous"
 					onClick={cycleToPreviousTable}

@@ -4,7 +4,6 @@ import React from "react";
 import "./StickyControlPanel.css";
 
 // Material UI
-import { makeStyles } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import IconButton from "@mui/material/IconButton";
@@ -21,28 +20,7 @@ const images = {
 	"Saint Louis": { img: stl_img, title: "The Arch" },
 };
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		display: "flex",
-	},
-	details: {
-		display: "flex",
-		flexDirection: "column",
-	},
-	content: {
-		flex: "1 0 auto",
-	},
-	controls: {
-		display: "flex",
-		alignItems: "center",
-		paddingLeft: theme.spacing(1),
-		paddingBottom: theme.spacing(1),
-	},
-}));
-
 function StickyControlPanel(props) {
-	const classes = useStyles();
-
 	const { tableNames, currentView, setTableView } = props;
 	const [tableName, setTableName] = React.useState(currentView);
 
@@ -66,12 +44,30 @@ function StickyControlPanel(props) {
 	};
 
 	return (
-		<Card className={classes.root} id="card">
-			<div className={classes.details}>
-				<CardContent className={classes.content}>
+		<Card
+			id="card"
+			sx={{
+				display: "flex",
+			}}
+		>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "column",
+				}}
+			>
+				<CardContent sx={{ flex: "1 0 auto" }}>
 					<h5 id="ControlPanelTitle">Geography</h5>
 				</CardContent>
-				<div className={classes.controls} id="controls">
+				<div
+					style={{
+						display: "flex",
+						alignItems: "center",
+						paddingLeft: 8,
+						paddingBottom: 8,
+					}}
+					id="controls"
+				>
 					<IconButton
 						aria-label="previous"
 						onClick={cycleToPreviousTable}
