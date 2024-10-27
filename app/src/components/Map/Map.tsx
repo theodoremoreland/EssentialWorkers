@@ -14,12 +14,16 @@ import { LegendLarge, LegendSmall } from "./Legend";
 import Tooltip from "./Tooltip";
 
 // Data
-import stl_counties from "../../data/geojson/MSA_Stats.geojson";
-import mo_counties from "../../data/geojson/MO_Stats.geojson";
-import il_counties from "../../data/geojson/IL_Stats.geojson";
+import stl_counties_raw from "../../data/geojson/MSA_Stats.geojson?raw";
+import mo_counties_raw from "../../data/geojson/MO_Stats.geojson?raw";
+import il_counties_raw from "../../data/geojson/IL_Stats.geojson?raw";
 
 // Token
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
+
+const stl_counties = JSON.parse(stl_counties_raw);
+const mo_counties = JSON.parse(mo_counties_raw);
+const il_counties = JSON.parse(il_counties_raw);
 
 const data = {
 	"Saint Louis": stl_counties,
