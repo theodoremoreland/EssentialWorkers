@@ -109,7 +109,7 @@ function App() {
 						industries, each classified by the Census Bureau’s Industry Codes:
 					</Typography>
 
-					<Typography variant="body1" id="groupings">
+					<div id="groupings">
 						<ul>
 							<li>
 								Grocery, Convenience, and Drug Stores: Grocery and related
@@ -146,7 +146,7 @@ function App() {
 								(8380) , and Child day care services (8470).
 							</li>
 						</ul>
-					</Typography>
+					</div>
 
 					<Typography variant="body1" id="table-summary">
 						You are currently viewing data for {selectedTableName}.
