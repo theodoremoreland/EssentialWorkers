@@ -1,11 +1,16 @@
-// Libraries
+// React
+import { ReactElement } from "react";
+
+// Material UI
 import { Toolbar, AppBar, Button } from "@mui/material";
+
+// Images
+import RDALogo from "../assets/images/RDA-logo-FINAL_Horiz-full-color-revised.png";
 
 // Styles
 import "./Navbar.css";
-import RDALogo from "../assets/images/RDA-logo-FINAL_Horiz-full-color-revised.png";
 
-const Navbar = () => {
+const Navbar = (): ReactElement => {
 	return (
 		<AppBar position="sticky">
 			<Toolbar>

@@ -1,12 +1,18 @@
-import { useRef, useEffect, useLayoutEffect, useState } from "react";
+// React
+import {
+	useRef,
+	useEffect,
+	useLayoutEffect,
+	useState,
+	ChangeEvent,
+} from "react";
 import ReactDOM from "react-dom";
-import mapboxgl from "mapbox-gl";
 
 // Material UI
 import Hidden from "@mui/material/Hidden";
 
-// Custom Styles
-import "./Map.css";
+// Mapbox
+import mapboxgl from "mapbox-gl";
 
 // Custom Components
 import { FilterLarge, FilterSmall } from "./Filter";
@@ -18,6 +24,9 @@ import stl_counties_raw from "../../data/geojson/MSA_Stats.geojson?raw";
 import mo_counties_raw from "../../data/geojson/MO_Stats.geojson?raw";
 import il_counties_raw from "../../data/geojson/IL_Stats.geojson?raw";
 
+// Styles
+import "./Map.css";
+
 // Token
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
@@ -25,13 +34,15 @@ const stl_counties = JSON.parse(stl_counties_raw);
 const mo_counties = JSON.parse(mo_counties_raw);
 const il_counties = JSON.parse(il_counties_raw);
 
-const data = {
+const data: {
+	[key: string]: GeoJSON.FeatureCollection;
+} = {
 	"Saint Louis": stl_counties,
 	Illinois: il_counties,
 	Missouri: mo_counties,
 };
 
-const palette = [
+const palette: string[] = [
 	"#ffffd9",
 	"#edf8b1",
 	"#c7e9b4",
@@ -43,7 +54,14 @@ const palette = [
 	"#081d58",
 ];
 
-const legendData = {
+const legendData: {
+	[key: string]: {
+		stops: [number, string][];
+		stopLabels: string[];
+		palette: string[];
+		description: string;
+	};
+} = {
 	"GDP (Thousands of dollars)": {
 		stops: [
 			64_000, 2_400_000, 7_000_000, 16_000_000, 32_000_000, 47_000_000,
@@ -140,13 +158,19 @@ const legendData = {
 	},
 };
 
-const mapViews = {
+const mapViews: {
+	[key: string]: { center: [number, number]; zoom: number };
+} = {
 	Missouri: { center: [-91.8318, 37.9643], zoom: 5 },
 	Illinois: { center: [-88.3985, 39.6331], zoom: 5 },
 	"Saint Louis": { center: [-90.1998378, 38.6264178], zoom: 7 },
 };
 
-const Map = (props) => {
+interface Props {
+	selectedTableName: string;
+}
+
+const Map = (props: Props) => {
 	const { selectedTableName } = props;
 
 	const firstUpdate = useRef(true);
@@ -174,7 +198,7 @@ const Map = (props) => {
 		},
 	};
 
-	const updateRadio = (event) => {
+	const updateRadio = (event: ChangeEvent<HTMLInputElement>) => {
 		setRadio(event.target.value);
 	};
 

@@ -1,11 +1,35 @@
+// React
+import { ReactElement } from "react";
+
+// MDBReact
 import { MDBDataTable } from "mdbreact";
 
-import "./ScrollingTable.css";
+// Styles
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import "./ScrollingTable.css";
 
-const ScrollingTable = (props) => {
+interface Props {
+	tableData:
+		| {
+				columns: {
+					label?: string;
+					field?: string;
+					sort?: string;
+					width?: number;
+					searchable?: boolean;
+					[rest: string]: unknown;
+				}[];
+				rows: {
+					clickEvent?: () => void;
+					[rest: string]: unknown;
+				}[];
+		  }
+		| undefined;
+}
+
+const ScrollingTable = (props: Props): ReactElement => {
 	const { tableData } = props;
 
 	return (

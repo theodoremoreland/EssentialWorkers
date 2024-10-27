@@ -1,10 +1,17 @@
+// React
+import { ReactElement } from "react";
+
+// Material UI
 import Grid from "@mui/material/Grid";
 
-import "./Footer.css";
+// Images
 import rdaLogo from "../assets/images/RDA-Primary-Logo.png";
 import daughertyLogo from "../assets/images/Daugherty_Logo.png";
 
-const Footer = (props) => {
+// Styles
+import "./Footer.css";
+
+const Footer = (): ReactElement => {
 	return (
 		<Grid component="footer" container spacing={0}>
 			<Grid component="p" item sm={12} md={12} lg={5}>
@@ -40,7 +47,6 @@ const Footer = (props) => {
 				). All of the data collected can be downloaded by clicking on the
 				"Download Data" button to the right of the navigation bar.
 			</Grid>
-
 			<Grid item sm={6} md={6} lg={3}>
 				<img
 					src={rdaLogo}

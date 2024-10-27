@@ -1,15 +1,12 @@
-// Libraries
-import { useState } from "react";
+// React
+import { ReactElement, useState } from "react";
 
 // Material UI
 import Grid from "@mui/material/Grid";
 import Hidden from "@mui/material/Hidden";
 import Typography from "@mui/material/Typography";
 
-// Styles
-import "./App.css";
-
-// Custom Components
+// Components
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import StaticControlPanel from "./components/Controls/StaticControlPanel";
@@ -24,6 +21,9 @@ import missouri_json from "./data/missouri.json";
 import illinois_json from "./data/illinois.json";
 import stl_json from "./data/stl.json";
 
+// Styles
+import "./App.css";
+
 const createRowsByCategory = (data) => ({
 	Totals: [data[0]],
 	Miscellaneous: [data[1], data[2], data[3], data[4], data[5]],
@@ -34,7 +34,7 @@ const createRowsByCategory = (data) => ({
 	"Family Responsibilities": [data[21], data[22]],
 });
 
-function App() {
+const App = (): ReactElement => {
 	const tables = {
 		Missouri: { rowsByCategory: createRowsByCategory(missouri_json) },
 		Illinois: { rowsByCategory: createRowsByCategory(illinois_json) },
@@ -210,6 +210,6 @@ function App() {
 			</Grid>
 		</Grid>
 	);
-}
+};
 
 export default App;

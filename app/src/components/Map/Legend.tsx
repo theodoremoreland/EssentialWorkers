@@ -1,12 +1,23 @@
+// React
+import { ReactElement } from "react";
+
 // Material UI
 import StopIcon from "@mui/icons-material/Stop";
 import Typography from "@mui/material/Typography";
 
-// Custom Styling
+// Styles
 import "./Legend.css";
-import { ReactElement } from "react";
 
-export const LegendLarge = (props): ReactElement => {
+interface Props {
+	legendObj: {
+		stops: [number, string][];
+		stopLabels: string[];
+		palette: string[];
+		description: string;
+	};
+}
+
+export const LegendLarge = (props: Props): ReactElement => {
 	const { legendObj } = props;
 	const { stops, description, stopLabels, palette } = legendObj;
 
@@ -35,7 +46,7 @@ export const LegendLarge = (props): ReactElement => {
 	);
 };
 
-export const LegendSmall = (props): ReactElement => {
+export const LegendSmall = (props: Props): ReactElement => {
 	const { legendObj } = props;
 	const { stops, description, stopLabels, palette } = legendObj;
 

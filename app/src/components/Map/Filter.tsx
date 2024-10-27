@@ -1,3 +1,6 @@
+// React
+import { ReactElement, ChangeEvent } from "react";
+
 // Material UI
 import { Card, CardActions } from "@mui/material";
 import {
@@ -11,7 +14,12 @@ import {
 // Custom Styling
 import "./Filter.css";
 
-export const FilterLarge = (props) => {
+interface Props {
+	radio: string;
+	updateRadio: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export const FilterLarge = (props: Props): ReactElement => {
 	const { radio, updateRadio } = props;
 
 	return (
@@ -57,7 +65,7 @@ export const FilterLarge = (props) => {
 	);
 };
 
-export const FilterSmall = (props) => {
+export const FilterSmall = (props: Props) => {
 	const { radio, updateRadio } = props;
 
 	return (
