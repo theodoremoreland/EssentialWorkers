@@ -24,13 +24,6 @@ import missouri_json from "./data/missouri.json";
 import illinois_json from "./data/illinois.json";
 import stl_json from "./data/stl.json";
 
-// Breakpoints
-// xs, extra-small: 0px
-// sm, small: 600px
-// md, medium: 960px
-// lg, large: 1280px
-// xl, extra-large: 1920px
-
 const createRowsByCategory = (data) => ({
 	Totals: [data[0]],
 	Miscellaneous: [data[1], data[2], data[3], data[4], data[5]],

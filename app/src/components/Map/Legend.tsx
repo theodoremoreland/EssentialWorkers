@@ -19,7 +19,7 @@ export const LegendLarge = (props): ReactElement => {
 				<h6 className="legend-descriptionz" style={{ marginBottom: "2%" }}>
 					{description}
 				</h6>
-				{stops.map((stop, index) => (
+				{stops.map((_, index: number) => (
 					<div key={stopLabels[index]} className="legend">
 						<div key={stopLabels[index]} className="legend-values">
 							{stopLabels[index]}
@@ -44,7 +44,7 @@ export const LegendSmall = (props): ReactElement => {
 			<div id="legend-area-small">
 				<Typography className="legend-title">Legend</Typography>
 				<Typography className="legend-description">{description}</Typography>
-				{stops.map((stop, index) => (
+				{stops.map((_, index: number) => (
 					<>
 						<span key={stopLabels[index]} className="legend-values">
 							{stopLabels[index]}

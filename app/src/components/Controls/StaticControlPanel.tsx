@@ -12,21 +12,21 @@ function StaticControlPanel(props) {
 	const { tableNames, currentView, setTableView } = props;
 	const [tableName, setTableName] = React.useState(currentView);
 
-	const cycleToNextTable = (event) => {
-		let oldIndex = tableNames.indexOf(tableName);
-		let newIndex = tableNames[oldIndex + 1] === undefined ? 0 : oldIndex + 1;
-		let nextTable = tableNames[newIndex];
+	const cycleToNextTable = () => {
+		const oldIndex = tableNames.indexOf(tableName);
+		const newIndex = tableNames[oldIndex + 1] === undefined ? 0 : oldIndex + 1;
+		const nextTable = tableNames[newIndex];
 		setTableName(nextTable);
 		setTableView(nextTable);
 	};
 
-	const cycleToPreviousTable = (event) => {
-		let oldIndex = tableNames.indexOf(tableName);
-		let newIndex =
+	const cycleToPreviousTable = () => {
+		const oldIndex = tableNames.indexOf(tableName);
+		const newIndex =
 			tableNames[oldIndex - 1] === undefined
 				? tableNames.length - 1
 				: oldIndex - 1;
-		let previousTable = tableNames[newIndex];
+		const previousTable = tableNames[newIndex];
 		setTableName(previousTable);
 		setTableView(previousTable);
 	};
