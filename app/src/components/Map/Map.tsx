@@ -19,7 +19,7 @@ import mo_counties from "../../data/geojson/MO_Stats.geojson";
 import il_counties from "../../data/geojson/IL_Stats.geojson";
 
 // Token
-mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
 const data = {
 	"Saint Louis": stl_counties,
