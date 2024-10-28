@@ -176,9 +176,7 @@ const App = (): ReactElement => {
 						}}
 					/>
 				</Grid>
-				<Grid item component="section" sm={12} md={12} lg={12} xl={12}>
-					<Footer />
-				</Grid>
+				<Footer />
 			</Grid>
 		</Grid>
 	);
