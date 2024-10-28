@@ -15,34 +15,16 @@ import Map from "./components/Map/Map";
 import ScrollingTable from "./components/Table/ScrollingTable";
 import Footer from "./components/Footer";
 
-// Data
-import { map_summary } from "./data/Constants";
-import missouri_json from "./data/missouri.json";
-import illinois_json from "./data/illinois.json";
-import stl_json from "./data/stl.json";
+// Controller
+import { map_summary, tables, GeographyName } from "./App.controller";
 
 // Styles
 import "./App.css";
 
-const createRowsByCategory = (data) => ({
-	Totals: [data[0]],
-	Miscellaneous: [data[1], data[2], data[3], data[4], data[5]],
-	"Full/Part-time": [data[6], data[7]],
-	"Race/Ethnicity": [data[8], data[9], data[10], data[11], data[12]],
-	"Education Level": [data[13], data[14], data[15], data[16], data[17]],
-	"Compensation and Benefits": [data[18], data[19], data[20]],
-	"Family Responsibilities": [data[21], data[22]],
-});
-
 const App = (): ReactElement => {
-	const tables = {
-		Missouri: { rowsByCategory: createRowsByCategory(missouri_json) },
-		Illinois: { rowsByCategory: createRowsByCategory(illinois_json) },
-		"Saint Louis": { rowsByCategory: createRowsByCategory(stl_json) },
-	};
-
-	const [selectedTableName, setSelectedTableName] =
-		useState<string>("Missouri");
+	const [selectedTableName, setSelectedTableName] = useState<GeographyName>(
+		GeographyName.Missouri
+	);
 
 	return (
 		<Grid container>

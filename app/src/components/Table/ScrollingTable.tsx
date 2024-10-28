@@ -4,6 +4,9 @@ import { ReactElement } from "react";
 // MDBReact
 import { MDBDataTable } from "mdbreact";
 
+// Custom
+import { TableRow } from "../../App.controller";
+
 // Styles
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -21,10 +24,7 @@ interface Props {
 					searchable?: boolean;
 					[rest: string]: unknown;
 				}[];
-				rows: {
-					clickEvent?: () => void;
-					[rest: string]: unknown;
-				}[];
+				rows: (TableRow | { [key: string]: string })[];
 		  }
 		| undefined;
 }

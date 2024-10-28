@@ -21,6 +21,10 @@ import il_counties_raw from "../../data/geojson/IL_Stats.geojson?raw";
 // Styles
 import "./Map.css";
 
+interface Props {
+	selectedTableName: string;
+}
+
 // Token
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
@@ -159,10 +163,6 @@ const mapViews: {
 	Illinois: { center: [-88.3985, 39.6331], zoom: 5 },
 	"Saint Louis": { center: [-90.1998378, 38.6264178], zoom: 7 },
 };
-
-interface Props {
-	selectedTableName: string;
-}
 
 const initialSelectedTableName: string = "Missouri";
 const initialLng: number = mapViews[initialSelectedTableName].center[0];
