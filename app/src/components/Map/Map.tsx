@@ -1,13 +1,5 @@
 // React
-import {
-	useRef,
-	useEffect,
-	useLayoutEffect,
-	useState,
-	ChangeEvent,
-	useMemo,
-	ReactElement,
-} from "react";
+import { useRef, useEffect, useState, ChangeEvent, ReactElement } from "react";
 import ReactDOM from "react-dom";
 
 // Material UI
@@ -57,7 +49,7 @@ const palette: string[] = [
 ];
 
 const legendData: {
-	[key: string]: {
+	[measure: string]: {
 		stops: [number, string][];
 		stopLabels: string[];
 		palette: string[];
@@ -172,49 +164,49 @@ interface Props {
 	selectedTableName: string;
 }
 
+const initialSelectedTableName: string = "Missouri";
+const initialLng: number = mapViews[initialSelectedTableName].center[0];
+const initialLat: number = mapViews[initialSelectedTableName].center[1];
+const initialZoom: number = mapViews[initialSelectedTableName].zoom;
+const initialSourceData: GeoJSON.FeatureCollection =
+	data[initialSelectedTableName];
+const initialMeasure: string = "GDP (Thousands of dollars)";
+const initialDataLayer: {
+	id: string;
+	type: "fill";
+	source: string;
+	paint: {
+		"fill-color": {
+			property: string;
+			stops: [number, string][];
+		};
+		"fill-opacity": number;
+	};
+} = {
+	id: "root-layer",
+	type: "fill",
+	source: "source-data",
+	paint: {
+		"fill-color": {
+			property: initialMeasure,
+			stops: legendData[initialMeasure].stops,
+		},
+		"fill-opacity": 0.8,
+	},
+};
+
 const MapWrapper = (props: Props): ReactElement => {
 	const { selectedTableName } = props;
 
-	const firstUpdate = useRef<boolean>(true);
-	const secondUpdate = useRef<boolean>(true);
+	const [selectedMeasure, setSelectedMeasure] =
+		useState<string>(initialMeasure);
 
-	const mapContainerRef = useRef<HTMLDivElement>(null);
-	const [mapRef, setMapRef] = useState<Map | null>(null);
+	const mapContainerRef = useRef<HTMLDivElement | null>(null);
+	const mapRef = useRef<Map | null>(null);
 	const tooltipRef = useRef<Popup>(new mapboxgl.Popup({ offset: 15 }));
-	const [radio, setRadio] = useState<string>("GDP (Thousands of dollars)");
-
-	const [lng, setLng] = useState<number>(mapViews[selectedTableName].center[0]);
-	const [lat, setLat] = useState<number>(mapViews[selectedTableName].center[1]);
-	const [zoom, setZoom] = useState<number>(mapViews[selectedTableName].zoom);
-
-	const dataLayer: {
-		id: string;
-		type: "fill";
-		source: string;
-		paint: {
-			"fill-color": {
-				property: string;
-				stops: [number, string][];
-			};
-			"fill-opacity": number;
-		};
-	} = useMemo(() => {
-		return {
-			id: "root-layer",
-			type: "fill",
-			source: "source-data",
-			paint: {
-				"fill-color": {
-					property: radio,
-					stops: legendData[radio].stops,
-				},
-				"fill-opacity": 0.8,
-			},
-		};
-	}, [radio]);
 
 	const updateRadio = (event: ChangeEvent<HTMLInputElement>): void => {
-		setRadio(event.target.value);
+		setSelectedMeasure(event.target.value);
 	};
 
 	// Initialize map when component mounts
@@ -224,22 +216,12 @@ const MapWrapper = (props: Props): ReactElement => {
 		const map: Map = new mapboxgl.Map({
 			container: mapContainerRef.current,
 			style: "mapbox://styles/mapbox/light-v10",
-			center: [lng, lat],
-			zoom: zoom,
+			center: [initialLng, initialLat],
+			zoom: initialZoom,
 			minZoom: 5,
 			minPitch: 0,
 			maxPitch: 0,
 			doubleClickZoom: false,
-		});
-
-		map.on("move", () => {
-			const _lng: string = map.getCenter().lng.toFixed(4);
-			const _lat: string = map.getCenter().lat.toFixed(4);
-			const _zoom: string = map.getZoom().toFixed(2);
-
-			setLng(parseInt(_lng));
-			setLat(parseInt(_lat));
-			setZoom(parseInt(_zoom));
 		});
 
 		// change cursor to pointer when user hovers over a clickable feature
@@ -274,62 +256,57 @@ const MapWrapper = (props: Props): ReactElement => {
 		});
 
 		map.on("load", () => {
-			map.addSource("source-data", { type: "geojson", data: mo_counties });
-			map.addLayer(dataLayer);
+			map.addSource("source-data", {
+				type: "geojson",
+				data: initialSourceData,
+			});
+			map.addLayer(initialDataLayer);
+
+			mapRef.current = map;
 		});
 
-		setMapRef(map);
-
 		return () => map.remove();
-	}, [dataLayer, lat, lng, selectedTableName, zoom]);
+	}, []);
 
 	// Updates Geography
-	useLayoutEffect(() => {
-		if (firstUpdate.current) {
-			firstUpdate.current = false;
-
-			return;
-		} else if (mapRef) {
-			mapRef.easeTo(mapViews[selectedTableName]);
-			(mapRef.getSource("source-data") as mapboxgl.GeoJSONSource)?.setData(
-				data[selectedTableName]
-			);
+	useEffect(() => {
+		if (mapRef.current && selectedTableName) {
+			mapRef.current.easeTo(mapViews[selectedTableName]);
+			(
+				mapRef.current.getSource("source-data") as mapboxgl.GeoJSONSource
+			)?.setData(data[selectedTableName]);
 		}
-	}, [selectedTableName, mapRef]);
+	}, [selectedTableName]);
 
 	// Updates Measure
-	useLayoutEffect(() => {
-		if (secondUpdate.current) {
-			secondUpdate.current = false;
-
-			return;
-		} else if (mapRef) {
-			mapRef.setPaintProperty("root-layer", "fill-color", {
-				property: radio,
-				stops: legendData[radio].stops,
+	useEffect(() => {
+		if (mapRef.current) {
+			mapRef.current.setPaintProperty("root-layer", "fill-color", {
+				property: selectedMeasure,
+				stops: legendData[selectedMeasure].stops,
 			});
 		}
-	}, [radio, mapRef]);
+	}, [selectedMeasure]);
 
 	return (
 		<>
 			{/* Filter (above map) */}
 			<Hidden lgUp>
-				<FilterSmall radio={radio} updateRadio={updateRadio} />
+				<FilterSmall radio={selectedMeasure} updateRadio={updateRadio} />
 			</Hidden>
 			<section id="map-section">
 				<Hidden only={["xs", "sm", "md"]}>
 					{/* Filter (atop map) */}
-					<FilterLarge radio={radio} updateRadio={updateRadio} />
+					<FilterLarge radio={selectedMeasure} updateRadio={updateRadio} />
 					{/* Legend (atop map) */}
-					<LegendLarge legendObj={legendData[radio]} />
+					<LegendLarge legendObj={legendData[selectedMeasure]} />
 				</Hidden>
 				{/* Map */}
 				<div className="map-container" ref={mapContainerRef} />
 			</section>
 			{/* Legend (below map) */}
 			<Hidden lgUp>
-				<LegendSmall legendObj={legendData[radio]} />
+				<LegendSmall legendObj={legendData[selectedMeasure]} />
 			</Hidden>
 		</>
 	);
