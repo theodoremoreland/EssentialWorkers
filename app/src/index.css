@@ -1,3 +1,18 @@
+@font-face {
+	font-family: hero;
+	src: url("./assets/fonts/Comfortaa-Bold.ttf");
+}
+
+@font-face {
+	font-family: body;
+	src: url("./assets/fonts/SourceSansPro-Light.ttf");
+}
+
+@font-face {
+	font-family: footer;
+	src: url("./assets/fonts/OpenSans-Light.ttf");
+}
+
 html,
 body {
 	margin: 0;
@@ -5,7 +20,46 @@ body {
 }
 
 main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	padding: 4rem 2rem;
 	background-color: #f6f8fa;
+
+	@media screen and (min-width: 1200) {
+		& {
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+		}
+	}
+}
+
+a:link {
+	color: rgb(0, 163, 152);
+}
+
+a:visited {
+	text-decoration: underline;
+	color: rgb(0, 146, 136);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p,
+ul {
+	max-width: 75ch;
+	font-family: body;
+	font-size: 1.1rem;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p {
 	margin: 0;
-	padding-top: 25%;
 }
