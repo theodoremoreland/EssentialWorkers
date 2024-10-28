@@ -59,7 +59,7 @@ const App = (): ReactElement => {
 						{" "}
 						Center for Economic and Policy Research
 					</a>
-					. Essential industry groups feature various, more specific industries,
+					. Essential industry group features various, more specific industries,
 					each classified by the Census Bureau's Industry Codes:
 				</p>
 				<ul id="groupings">
