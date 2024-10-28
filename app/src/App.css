@@ -26,18 +26,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-html,
-body {
-	margin: 0px;
-	padding: 0px;
-}
-
-main {
-	background-color: #f6f8fa;
-	margin: 0;
-	padding-top: 25%;
-}
-
 p#intro,
 p#segway,
 p#map-summary,

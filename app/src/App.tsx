@@ -29,9 +29,7 @@ const App = (): ReactElement => {
 	return (
 		<Grid container>
 			<Navbar />
-			<Grid item md={12}>
-				<Hero />
-			</Grid>
+			<Hero />
 			<Grid container component="main">
 				<Hidden only={["xs", "sm", "md"]}>
 					<Grid item lg={3} xl={3}>
