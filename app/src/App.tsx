@@ -1,13 +1,9 @@
 // React
 import { ReactElement, useState } from "react";
 
-// Material UI
-import Grid from "@mui/material/Grid";
-
 // Components
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import StickyControlPanel from "./components/Controls/StickyControlPanel";
 import Map from "./components/Map/Map";
 import ScrollingTable from "./components/Table/ScrollingTable";
 import Footer from "./components/Footer";
@@ -19,22 +15,13 @@ import { map_summary, tables, GeographyName } from "./App.controller";
 import "./App.css";
 
 const App = (): ReactElement => {
-	const [selectedTableName, setSelectedTableName] = useState<GeographyName>(
-		GeographyName.Missouri
-	);
+	const [selectedTableName] = useState<GeographyName>(GeographyName.Missouri);
 
 	return (
 		<>
 			<Navbar />
 			<Hero />
 			<main>
-				<Grid item lg={3} xl={3}>
-					<StickyControlPanel
-						tableNames={Object.keys(tables)}
-						currentView={selectedTableName}
-						setTableView={setSelectedTableName}
-					/>
-				</Grid>
 				<p id="intro">
 					Essential workers are shouldering the responsibility of providing
 					fundamental products and services during the COVID-19 pandemic all
