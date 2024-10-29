@@ -24,10 +24,10 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-end;
 	gap: 2rem;
 	width: 100%;
-	padding: 4rem 2rem;
+	padding: 74px 10% 74px 20%;
 	background-color: #f6f8fa;
 }
 
@@ -46,9 +46,8 @@ a:hover {
 
 p,
 ul {
-	max-width: 75ch;
 	font-family: body;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	text-align: justify;
 	text-justify: inter-word;
 }
