@@ -11,9 +11,21 @@
 
 	background-image: url("../assets/images/essential-worker.jpg");
 	background-attachment: fixed;
-	background-position: 0% 0%;
+	background-position: 53% 0%;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@media screen and (min-width: 1400px) {
+		& {
+			background-position: 0% 0%;
+		}
+	}
+
+	@media screen and (min-width: 2150px) {
+		& {
+			background-position: 0% 15%;
+		}
+	}
 }
 
 #hero > h1 {
