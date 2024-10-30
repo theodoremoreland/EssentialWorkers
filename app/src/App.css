@@ -1,2 +1,5 @@
-
-
+.table-summary {
+	padding: 0.5rem 1rem;
+	width: 100%;
+	background-color: rgb(235, 91, 59);
+}

@@ -38,10 +38,10 @@ const App = (): ReactElement => {
 				</p>
 				<Map selectedTableName={selectedTableName} />
 				<p id="segway">
-					The data table below details characteristics of essential workers by
+					The tables below detail characteristics of essential workers by
 					overall quantity and percentage, generalized into six groups. In
-					generalizing frontline / essential industries, we took inspiration
-					from the
+					generalizing frontline/essential industries, we took inspiration from
+					the
 					<a href="https://cepr.net/a-basic-demographic-profile-of-workers-in-frontline-industries/">
 						{" "}
 						Center for Economic and Policy Research
@@ -84,9 +84,9 @@ const App = (): ReactElement => {
 						and Child day care services (8470).
 					</li>
 				</ul>
-				<p id="table-summary">
-					You are currently viewing data for {selectedTableName}.
-				</p>
+				<section className="table-summary">
+					<h2>{GeographyName["Saint Louis"]}</h2>
+				</section>
 				<Table
 					tableData={{
 						columns: [
@@ -119,15 +119,133 @@ const App = (): ReactElement => {
 							},
 						],
 						rows: [
-							...tables[selectedTableName].rowsByCategory["Totals"],
-							...tables[selectedTableName].rowsByCategory["Miscellaneous"],
-							...tables[selectedTableName].rowsByCategory["Full/Part-time"],
-							...tables[selectedTableName].rowsByCategory["Race/Ethnicity"],
-							...tables[selectedTableName].rowsByCategory["Education Level"],
-							...tables[selectedTableName].rowsByCategory[
+							...tables[GeographyName["Saint Louis"]].rowsByCategory["Totals"],
+							...tables[GeographyName["Saint Louis"]].rowsByCategory[
+								"Miscellaneous"
+							],
+							...tables[GeographyName["Saint Louis"]].rowsByCategory[
+								"Full/Part-time"
+							],
+							...tables[GeographyName["Saint Louis"]].rowsByCategory[
+								"Race/Ethnicity"
+							],
+							...tables[GeographyName["Saint Louis"]].rowsByCategory[
+								"Education Level"
+							],
+							...tables[GeographyName["Saint Louis"]].rowsByCategory[
 								"Compensation and Benefits"
 							],
-							...tables[selectedTableName].rowsByCategory[
+							...tables[GeographyName["Saint Louis"]].rowsByCategory[
+								"Family Responsibilities"
+							],
+						],
+					}}
+				/>
+				<section className="table-summary">
+					<h2>{GeographyName.Missouri}</h2>
+				</section>
+				<Table
+					tableData={{
+						columns: [
+							{ label: "", field: "index" },
+							{
+								label: "All Frontline Industries",
+								field: "All Frontline Industries",
+							},
+							{ label: "All Workers", field: "All Workers" },
+							{
+								label: "Building Cleaning Services",
+								field: "Building Cleaning Services",
+							},
+							{
+								label: "Childcare & Social Services",
+								field: "Childcare & Social Services",
+							},
+							{
+								label: "Grocery, Convenience, & Drug Stores",
+								field: "Grocery, Convenience, & Drug Stores",
+							},
+							{ label: "Health Care", field: "Health Care" },
+							{
+								label: "Public Transit",
+								field: "Public Transit",
+							},
+							{
+								label: "Trucking, Warehouse, & Postal Service",
+								field: "Trucking, Warehouse, & Postal Service",
+							},
+						],
+						rows: [
+							...tables[GeographyName.Missouri].rowsByCategory["Totals"],
+							...tables[GeographyName.Missouri].rowsByCategory["Miscellaneous"],
+							...tables[GeographyName.Missouri].rowsByCategory[
+								"Full/Part-time"
+							],
+							...tables[GeographyName.Missouri].rowsByCategory[
+								"Race/Ethnicity"
+							],
+							...tables[GeographyName.Missouri].rowsByCategory[
+								"Education Level"
+							],
+							...tables[GeographyName.Missouri].rowsByCategory[
+								"Compensation and Benefits"
+							],
+							...tables[GeographyName.Missouri].rowsByCategory[
+								"Family Responsibilities"
+							],
+						],
+					}}
+				/>
+				<section className="table-summary">
+					<h2>{GeographyName.Illinois}</h2>
+				</section>
+				<Table
+					tableData={{
+						columns: [
+							{ label: "", field: "index" },
+							{
+								label: "All Frontline Industries",
+								field: "All Frontline Industries",
+							},
+							{ label: "All Workers", field: "All Workers" },
+							{
+								label: "Building Cleaning Services",
+								field: "Building Cleaning Services",
+							},
+							{
+								label: "Childcare & Social Services",
+								field: "Childcare & Social Services",
+							},
+							{
+								label: "Grocery, Convenience, & Drug Stores",
+								field: "Grocery, Convenience, & Drug Stores",
+							},
+							{ label: "Health Care", field: "Health Care" },
+							{
+								label: "Public Transit",
+								field: "Public Transit",
+							},
+							{
+								label: "Trucking, Warehouse, & Postal Service",
+								field: "Trucking, Warehouse, & Postal Service",
+							},
+						],
+						rows: [
+							...tables[GeographyName.Illinois].rowsByCategory["Totals"],
+							...tables[GeographyName.Illinois].rowsByCategory["Miscellaneous"],
+							...tables[GeographyName.Illinois].rowsByCategory[
+								"Full/Part-time"
+							],
+							...tables[GeographyName.Illinois].rowsByCategory[
+								"Race/Ethnicity"
+							],
+							...tables[GeographyName.Illinois].rowsByCategory[
+								"Education Level"
+							],
+							...tables[GeographyName.Illinois].rowsByCategory[
+								"Compensation and Benefits"
+							],
+							...tables[GeographyName.Illinois].rowsByCategory[
 								"Family Responsibilities"
 							],
 						],
