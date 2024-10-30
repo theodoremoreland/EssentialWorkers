@@ -5,15 +5,7 @@ import { ReactElement } from "react";
 import { TableRow } from "../../App.controller";
 
 // Styles
-import "./ScrollingTable.css";
-
-/**
- * 							{ "Childcare & Social Services": "Full Time" },
- * 							{ "Childcare & Social Services": "Race/Ethnicity" },
- * 							{ "Childcare & Social Services": "Education Level" },
- * 							{ "Childcare & Social Services": "Compensation and Benefits" },
- * 							{ "Childcare & Social Services": "Family Responsibilities" },
- */
+import "./Table.css";
 
 interface Props {
 	tableData:
@@ -52,8 +44,8 @@ const ScrollingTable = (props: Props): ReactElement => {
 	const { tableData } = props;
 
 	return (
-		<section id="scrolling-table-section">
-			<table id="scrolling-table">
+		<section id="Table-section">
+			<table id="Table">
 				<thead>
 					<tr>
 						{tableData?.columns.map((column, index) => (

@@ -1,4 +1,4 @@
-#scrolling-table-section {
+#Table-section {
 	position: relative;
 	width: 100%;
 	overflow: auto;
@@ -10,7 +10,7 @@
 	}
 }
 
-#scrolling-table {
+#Table {
 	position: relative;
 	width: 100%;
 	font-size: 0.9rem;
@@ -58,7 +58,7 @@
 	}
 }
 
-#scrolling-table > tbody > tr:nth-child(1) {
+#Table > tbody > tr:nth-child(1) {
 	background-color: #727272;
 	color: whitesmoke;
 }

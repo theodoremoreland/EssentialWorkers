@@ -5,7 +5,7 @@ import { ReactElement, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Map from "./components/Map/Map";
-import ScrollingTable from "./components/Table/ScrollingTable";
+import Table from "./components/Table/Table";
 import Footer from "./components/Footer";
 
 // Controller
@@ -87,7 +87,7 @@ const App = (): ReactElement => {
 				<p id="table-summary">
 					You are currently viewing data for {selectedTableName}.
 				</p>
-				<ScrollingTable
+				<Table
 					tableData={{
 						columns: [
 							{ label: "", field: "index" },
