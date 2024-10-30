@@ -166,6 +166,13 @@ const ScrollingTable = (props: Props): ReactElement => {
 							</tr>
 						))}
 				</tbody>
+				<tfoot>
+					<tr>
+						{tableData?.columns.map((column, index) => (
+							<th key={index}>{column.label}</th>
+						))}
+					</tr>
+				</tfoot>
 			</table>
 		</section>
 	);
