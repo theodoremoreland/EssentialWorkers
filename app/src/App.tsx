@@ -90,54 +90,43 @@ const App = (): ReactElement => {
 				<ScrollingTable
 					tableData={{
 						columns: [
-							{ label: "", field: "index", width: 200 },
+							{ label: "", field: "index" },
 							{
 								label: "All Frontline Industries",
 								field: "All Frontline Industries",
-								width: 200,
 							},
-							{ label: "All Workers", field: "All Workers", width: 200 },
+							{ label: "All Workers", field: "All Workers" },
 							{
 								label: "Building Cleaning Services",
 								field: "Building Cleaning Services",
-								width: 200,
 							},
 							{
 								label: "Childcare & Social Services",
 								field: "Childcare & Social Services",
-								width: 200,
 							},
 							{
 								label: "Grocery, Convenience, & Drug Stores",
 								field: "Grocery, Convenience, & Drug Stores",
-								width: 200,
 							},
-							{ label: "Health Care", field: "Health Care", width: 200 },
+							{ label: "Health Care", field: "Health Care" },
 							{
 								label: "Public Transit",
 								field: "Public Transit",
-								width: 200,
 							},
 							{
 								label: "Trucking, Warehouse, & Postal Service",
 								field: "Trucking, Warehouse, & Postal Service",
-								width: 200,
 							},
 						],
 						rows: [
 							...tables[selectedTableName].rowsByCategory["Totals"],
 							...tables[selectedTableName].rowsByCategory["Miscellaneous"],
-							{ "Childcare & Social Services": "Full Time" },
 							...tables[selectedTableName].rowsByCategory["Full/Part-time"],
-							{ "Childcare & Social Services": "Race/Ethnicity" },
 							...tables[selectedTableName].rowsByCategory["Race/Ethnicity"],
-							{ "Childcare & Social Services": "Education Level" },
 							...tables[selectedTableName].rowsByCategory["Education Level"],
-							{ "Childcare & Social Services": "Compensation and Benefits" },
 							...tables[selectedTableName].rowsByCategory[
 								"Compensation and Benefits"
 							],
-							{ "Childcare & Social Services": "Family Responsibilities" },
 							...tables[selectedTableName].rowsByCategory[
 								"Family Responsibilities"
 							],
