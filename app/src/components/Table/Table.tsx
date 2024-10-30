@@ -64,7 +64,15 @@ const ScrollingTable = (props: Props): ReactElement => {
 							</tr>
 						))}
 					<tr className="group-header">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td>Full Time</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					{tableData?.rows
 						.filter((row) => groupings[row.index] === "Full Time")
@@ -76,7 +84,15 @@ const ScrollingTable = (props: Props): ReactElement => {
 							</tr>
 						))}
 					<tr className="group-header">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td>Race/Ethnicity</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					{tableData?.rows
 						.filter((row) => groupings[row.index] === "Race/Ethnicity")
@@ -88,7 +104,15 @@ const ScrollingTable = (props: Props): ReactElement => {
 							</tr>
 						))}
 					<tr className="group-header">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td>Education Level</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					{tableData?.rows
 						.filter((row) => groupings[row.index] === "Education Level")
@@ -100,7 +124,15 @@ const ScrollingTable = (props: Props): ReactElement => {
 							</tr>
 						))}
 					<tr className="group-header">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td>Compensation and Benefits</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					{tableData?.rows
 						.filter(
@@ -114,7 +146,15 @@ const ScrollingTable = (props: Props): ReactElement => {
 							</tr>
 						))}
 					<tr className="group-header">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td>Family Responsibilities</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					{tableData?.rows
 						.filter((row) => groupings[row.index] === "Family Responsibilities")
