@@ -1,6 +1,13 @@
 #scrolling-table-section {
 	position: relative;
-	width: 90%;
+	width: 100%;
+	overflow: auto;
+
+	@media screen and (min-width: 768px) {
+		& {
+			width: 90%;
+		}
+	}
 }
 
 #scrolling-table {

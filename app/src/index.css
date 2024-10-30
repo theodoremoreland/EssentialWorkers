@@ -35,8 +35,14 @@ main {
 	align-items: flex-end;
 	gap: 2rem;
 	width: 100%;
-	padding: 74px 5% 74px 20%;
+	padding: 74px 5% 74px 5%;
 	background-color: #f6f8fa;
+
+	@media screen and (min-width: 768px) {
+		& {
+			padding: 74px 5% 74px 20%;
+		}
+	}
 }
 
 a:link {
