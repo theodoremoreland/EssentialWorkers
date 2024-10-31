@@ -1,6 +1,6 @@
 [
 	{
-		"index": "All Workers(16+)",
+		"index": "All Workers (16+)",
 		"All Workers": 34205,
 		"All Frontline Industries": 7232,
 		"Grocery, Convenience, & Drug Stores": 267,
@@ -154,7 +154,7 @@
 		"Childcare & Social Services": 1.7
 	},
 	{
-		"index": "High School",
+		"index": "HS",
 		"All Workers": 23.52,
 		"All Frontline Industries": 26.19,
 		"Grocery, Convenience, & Drug Stores": 47.57,
@@ -165,7 +165,7 @@
 		"Childcare & Social Services": 45.45
 	},
 	{
-		"index": "Some College",
+		"index": "Some college",
 		"All Workers": 22.3,
 		"All Frontline Industries": 23.94,
 		"Grocery, Convenience, & Drug Stores": 29.59,
@@ -220,7 +220,7 @@
 		"Childcare & Social Services": 18.75
 	},
 	{
-		"index": "No Health Insurance",
+		"index": "No health insurance",
 		"All Workers": 7.87,
 		"All Frontline Industries": 8.19,
 		"Grocery, Convenience, & Drug Stores": 22.1,
