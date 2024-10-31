@@ -122,13 +122,20 @@ const App = (): ReactElement => {
 				<section className="table-summary vertical-items">
 					<h2>{GeographyName.Missouri}</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-						sapien felis, aliquam non hendrerit imperdiet, tempus non quam.
-						Aenean condimentum, tellus id tempor rhoncus, mi diam luctus quam,
-						nec commodo erat arcu sit amet nisi. Vestibulum bibendum placerat
-						magna a laoreet. Duis ac metus lobortis, egestas ligula ut, feugiat
-						urna. Nunc ullamcorper venenatis varius. Pellentesque massa lorem,
-						accumsan vel purus vitae, dapibus suscipit urna.
+						Missouri has 2,888,430 workers aged 16 and above, with 645,170
+						employed in frontline industries. Females make up a significant
+						portion of the frontline workforce (64.9%), especially in Health
+						Care (78.1%) and Childcare & Social Services (86.8%). Workers aged
+						50 and above represent 34.2% of the frontline workforce, with
+						notable representation in Public Transit (41.0%) and Trucking,
+						Warehouse, & Postal Service (43.3%). A majority of frontline workers
+						own homes (65.7%), with the highest rates in Public Transit (69.4%).
+						The frontline workforce is predominantly White (77.6%), with
+						significant representation of Black workers (16.0%) and Hispanic
+						workers (3.0%). A notable portion of frontline workers live below
+						the poverty line (8.3%) or below 200% of the poverty line (25.6%).
+						11.2% of frontline workers lack health insurance, with the highest
+						rates in Building Cleaning Services (27.9%).
 					</p>
 				</section>
 				<section className="table-section">
@@ -259,12 +266,11 @@ const App = (): ReactElement => {
 					<h2>Methodology</h2>
 					<p>
 						In generalizing frontline/essential industries, we took inspiration
-						from the
+						from the{" "}
 						<a
 							target="_blank"
 							href="https://cepr.net/a-basic-demographic-profile-of-workers-in-frontline-industries/"
 						>
-							{" "}
 							Center for Economic and Policy Research
 						</a>
 						. Essential industry group features various, more specific
