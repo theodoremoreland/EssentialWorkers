@@ -197,13 +197,22 @@ const App = (): ReactElement => {
 				<section className="table-summary vertical-items">
 					<h2>{GeographyName.Illinois}</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-						sapien felis, aliquam non hendrerit imperdiet, tempus non quam.
-						Aenean condimentum, tellus id tempor rhoncus, mi diam luctus quam,
-						nec commodo erat arcu sit amet nisi. Vestibulum bibendum placerat
-						magna a laoreet. Duis ac metus lobortis, egestas ligula ut, feugiat
-						urna. Nunc ullamcorper venenatis varius. Pellentesque massa lorem,
-						accumsan vel purus vitae, dapibus suscipit urna.
+						Illinois has 6,221,825 workers aged 16 and above, with 1,320,714
+						employed in frontline industries. Females constitute a significant
+						portion of the frontline workforce (63.7%), especially in Health
+						Care (78.3%) and Childcare & Social Services (86.1%). Foreign-born
+						workers make up 18.1% of the frontline workforce, with the highest
+						representation in Building Cleaning Services (47.1%). A majority of
+						frontline workers own homes (66.5%), with the highest rates in
+						Public Transit (69.8%). The frontline workforce is predominantly
+						White (59.9%), with significant representation of Black workers
+						(17.9%) and Hispanic workers (14.3%). Frontline workers have varying
+						education levels, with 24.4% having a high school diploma and 36.6%
+						having some college education. A notable portion of frontline
+						workers live below the poverty line (6.9%) or below 200% of the
+						poverty line (21.5%). 8.0% of frontline workers lack health
+						insurance, with the highest rates in Building Cleaning Services
+						(24.3%).
 					</p>
 				</section>
 				<section className="table-section">
