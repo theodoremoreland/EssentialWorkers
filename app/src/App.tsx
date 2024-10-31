@@ -161,7 +161,7 @@ const App = (): ReactElement => {
 						}}
 					/>
 				</section>
-				<section className="table-summary vertical items">
+				<section className="table-summary vertical-items">
 					<h2>{GeographyName.Missouri}</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
