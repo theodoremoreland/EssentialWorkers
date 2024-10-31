@@ -39,58 +39,6 @@ const App = (): ReactElement => {
 				<section id="map-section">
 					<Map selectedTableName={selectedTableName} />
 				</section>
-				<section className="vertical-items">
-					<p>
-						The tables below detail characteristics of essential workers by
-						overall quantity and percentage, generalized into six groups. In
-						generalizing frontline/essential industries, we took inspiration
-						from the
-						<a
-							target="_blank"
-							href="https://cepr.net/a-basic-demographic-profile-of-workers-in-frontline-industries/"
-						>
-							{" "}
-							Center for Economic and Policy Research
-						</a>
-						. Essential industry group features various, more specific
-						industries, each classified by the Census Bureau's Industry Codes:
-					</p>
-					<ul id="groupings">
-						<li>
-							Grocery, Convenience, and Drug Stores: Grocery and related product
-							merchant wholesalers (4470), Supermarkets and other grocery stores
-							(4971), Convenience Stores (4972), Pharmacies and drug stores
-							(5070), and General merchandise stores, including warehouse clubs
-							and supercenters (5391)
-						</li>
-						<li>
-							Public Transit: Rail transportation (6080) and Bus service and
-							urban transit (6180).
-						</li>
-						<li>
-							Trucking, Warehouse, and Postal Service: Truck transportation
-							(6170), Warehousing and storage (6390), and Postal Service (6370).
-						</li>
-						<li>
-							Building Cleaning Services: Cleaning Services to Buildings and
-							Dwellings (7690).
-						</li>
-						<li>
-							Health Care: Offices of physicians (7970), Outpatient care centers
-							(8090), Home health care services (8170), Other health care
-							services (8180), General medical and surgical hospitals, and
-							specialty hospitals (8191), Psychiatric and substance abuse
-							hospitals (8192), Nursing care facilities (skilled nursing
-							facilities) (8270), and Residential care facilities, except
-							skilled nursing facilities (8290).
-						</li>
-						<li>
-							Child Care and Social Services: Individual and family services
-							(8370), Community food and housing, and emergency services (8380),
-							and Child day care services (8470).
-						</li>
-					</ul>
-				</section>
 				<section className="table-summary vertical-items">
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
@@ -296,6 +244,57 @@ const App = (): ReactElement => {
 							],
 						}}
 					/>
+				</section>
+				<section id="methodoly" className="vertical-items">
+					<h2>Methodology</h2>
+					<p>
+						In generalizing frontline/essential industries, we took inspiration
+						from the
+						<a
+							target="_blank"
+							href="https://cepr.net/a-basic-demographic-profile-of-workers-in-frontline-industries/"
+						>
+							{" "}
+							Center for Economic and Policy Research
+						</a>
+						. Essential industry group features various, more specific
+						industries, each classified by the Census Bureau's Industry Codes:
+					</p>
+					<ul id="groupings">
+						<li>
+							Grocery, Convenience, and Drug Stores: Grocery and related product
+							merchant wholesalers (4470), Supermarkets and other grocery stores
+							(4971), Convenience Stores (4972), Pharmacies and drug stores
+							(5070), and General merchandise stores, including warehouse clubs
+							and supercenters (5391)
+						</li>
+						<li>
+							Public Transit: Rail transportation (6080) and Bus service and
+							urban transit (6180).
+						</li>
+						<li>
+							Trucking, Warehouse, and Postal Service: Truck transportation
+							(6170), Warehousing and storage (6390), and Postal Service (6370).
+						</li>
+						<li>
+							Building Cleaning Services: Cleaning Services to Buildings and
+							Dwellings (7690).
+						</li>
+						<li>
+							Health Care: Offices of physicians (7970), Outpatient care centers
+							(8090), Home health care services (8170), Other health care
+							services (8180), General medical and surgical hospitals, and
+							specialty hospitals (8191), Psychiatric and substance abuse
+							hospitals (8192), Nursing care facilities (skilled nursing
+							facilities) (8270), and Residential care facilities, except
+							skilled nursing facilities (8290).
+						</li>
+						<li>
+							Child Care and Social Services: Individual and family services
+							(8370), Community food and housing, and emergency services (8380),
+							and Child day care services (8470).
+						</li>
+					</ul>
 				</section>
 			</main>
 			<Footer />
