@@ -39,7 +39,7 @@ const App = (): ReactElement => {
 				<section id="map-section">
 					<Map selectedTableName={selectedTableName} />
 				</section>
-				<section className="table-summary vertical-items">
+				<section id="stl" className="table-summary vertical-items">
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
 						There are 34,205 workers aged 16 and above, with 7,232 working in

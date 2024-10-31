@@ -60,12 +60,11 @@ main {
 }
 
 a:link {
-	color: rgb(0, 163, 152);
+	color: rgb(0, 133, 124);
 }
 
 a:visited {
 	text-decoration: underline;
-	color: rgb(0, 146, 136);
 }
 
 a:hover {
