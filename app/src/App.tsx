@@ -42,13 +42,23 @@ const App = (): ReactElement => {
 				<section className="table-summary vertical-items">
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-						sapien felis, aliquam non hendrerit imperdiet, tempus non quam.
-						Aenean condimentum, tellus id tempor rhoncus, mi diam luctus quam,
-						nec commodo erat arcu sit amet nisi. Vestibulum bibendum placerat
-						magna a laoreet. Duis ac metus lobortis, egestas ligula ut, feugiat
-						urna. Nunc ullamcorper venenatis varius. Pellentesque massa lorem,
-						accumsan vel purus vitae, dapibus suscipit urna.
+						There are 34,205 workers aged 16 and above, with 7,232 working in
+						frontline industries. Females constitute a significant portion of
+						the workforce in frontline industries, with notable representation
+						in Public Transit (85.54%) and Building Cleaning Services (75.26%).
+						Foreign-born workers are present across all frontline sectors, with
+						the highest representation in Health Care (10.64%) and Grocery,
+						Convenience, & Drug Stores (10.49%). Workers aged 50 and above are
+						well-represented, especially in Health Care (53.89%) and Childcare &
+						Social Services (48.3%). A majority of workers in frontline
+						industries own homes, with Health Care workers having the highest
+						home ownership rate (71.62%). The workforce is diverse, with
+						significant representation of Black workers in Childcare & Social
+						Services (73.3%) and Public Transit (39.28%). A portion of workers
+						live below the poverty line, with the highest in Grocery,
+						Convenience, & Drug Stores (20.31%). A notable percentage of workers
+						lack health insurance, especially in Grocery, Convenience, & Drug
+						Stores (22.1%).
 					</p>
 				</section>
 				<section className="table-section">
