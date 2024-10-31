@@ -294,7 +294,7 @@ const MapWrapper = (props: Props): ReactElement => {
 			<Hidden lgUp>
 				<FilterSmall radio={selectedMeasure} updateRadio={updateRadio} />
 			</Hidden>
-			<section id="map-section">
+			<div id="map-container">
 				<Hidden only={["xs", "sm", "md"]}>
 					{/* Filter (atop map) */}
 					<FilterLarge radio={selectedMeasure} updateRadio={updateRadio} />
@@ -303,7 +303,7 @@ const MapWrapper = (props: Props): ReactElement => {
 				</Hidden>
 				{/* Map */}
 				<div className="map-container" ref={mapContainerRef} />
-			</section>
+			</div>
 			{/* Legend (below map) */}
 			<Hidden lgUp>
 				<LegendSmall legendObj={legendData[selectedMeasure]} />

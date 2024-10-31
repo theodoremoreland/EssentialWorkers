@@ -44,137 +44,133 @@ const ScrollingTable = (props: Props): ReactElement => {
 	const { tableData } = props;
 
 	return (
-		<section id="Table-section">
-			<table id="Table">
-				<thead>
-					<tr>
-						{tableData?.columns.map((column, index) => (
-							<th key={index}>{column.label}</th>
-						))}
-					</tr>
-				</thead>
-				<tbody>
-					{tableData?.rows
-						.filter((row) => Boolean(groupings[row.index]) === false)
-						.map((row, index) => (
-							<tr key={index}>
-								{Object.entries(row).map(([, v], index) => (
-									<td key={index}>{v}</td>
-								))}
-							</tr>
-						))}
-					<tr className="group-header">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Full Time</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					{tableData?.rows
-						.filter((row) => groupings[row.index] === "Full Time")
-						.map((row, index) => (
-							<tr key={index}>
-								{Object.entries(row).map(([, v], index) => (
-									<td key={index}>{v}</td>
-								))}
-							</tr>
-						))}
-					<tr className="group-header">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Race/Ethnicity</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					{tableData?.rows
-						.filter((row) => groupings[row.index] === "Race/Ethnicity")
-						.map((row, index) => (
-							<tr key={index}>
-								{Object.entries(row).map(([, v], index) => (
-									<td key={index}>{v}</td>
-								))}
-							</tr>
-						))}
-					<tr className="group-header">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Education Level</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					{tableData?.rows
-						.filter((row) => groupings[row.index] === "Education Level")
-						.map((row, index) => (
-							<tr key={index}>
-								{Object.entries(row).map(([, v], index) => (
-									<td key={index}>{v}</td>
-								))}
-							</tr>
-						))}
-					<tr className="group-header">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Compensation and Benefits</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					{tableData?.rows
-						.filter(
-							(row) => groupings[row.index] === "Compensation and Benefits"
-						)
-						.map((row, index) => (
-							<tr key={index}>
-								{Object.entries(row).map(([, v], index) => (
-									<td key={index}>{v}</td>
-								))}
-							</tr>
-						))}
-					<tr className="group-header">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Family Responsibilities</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					{tableData?.rows
-						.filter((row) => groupings[row.index] === "Family Responsibilities")
-						.map((row, index) => (
-							<tr key={index}>
-								{Object.entries(row).map(([, v], index) => (
-									<td key={index}>{v}</td>
-								))}
-							</tr>
-						))}
-				</tbody>
-				<tfoot>
-					<tr>
-						{tableData?.columns.map((column, index) => (
-							<th key={index}>{column.label}</th>
-						))}
-					</tr>
-				</tfoot>
-			</table>
-		</section>
+		<table id="Table">
+			<thead>
+				<tr>
+					{tableData?.columns.map((column, index) => (
+						<th key={index}>{column.label}</th>
+					))}
+				</tr>
+			</thead>
+			<tbody>
+				{tableData?.rows
+					.filter((row) => Boolean(groupings[row.index]) === false)
+					.map((row, index) => (
+						<tr key={index}>
+							{Object.entries(row).map(([, v], index) => (
+								<td key={index}>{v}</td>
+							))}
+						</tr>
+					))}
+				<tr className="group-header">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Full Time</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				{tableData?.rows
+					.filter((row) => groupings[row.index] === "Full Time")
+					.map((row, index) => (
+						<tr key={index}>
+							{Object.entries(row).map(([, v], index) => (
+								<td key={index}>{v}</td>
+							))}
+						</tr>
+					))}
+				<tr className="group-header">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Race/Ethnicity</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				{tableData?.rows
+					.filter((row) => groupings[row.index] === "Race/Ethnicity")
+					.map((row, index) => (
+						<tr key={index}>
+							{Object.entries(row).map(([, v], index) => (
+								<td key={index}>{v}</td>
+							))}
+						</tr>
+					))}
+				<tr className="group-header">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Education Level</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				{tableData?.rows
+					.filter((row) => groupings[row.index] === "Education Level")
+					.map((row, index) => (
+						<tr key={index}>
+							{Object.entries(row).map(([, v], index) => (
+								<td key={index}>{v}</td>
+							))}
+						</tr>
+					))}
+				<tr className="group-header">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Compensation and Benefits</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				{tableData?.rows
+					.filter((row) => groupings[row.index] === "Compensation and Benefits")
+					.map((row, index) => (
+						<tr key={index}>
+							{Object.entries(row).map(([, v], index) => (
+								<td key={index}>{v}</td>
+							))}
+						</tr>
+					))}
+				<tr className="group-header">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Family Responsibilities</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				{tableData?.rows
+					.filter((row) => groupings[row.index] === "Family Responsibilities")
+					.map((row, index) => (
+						<tr key={index}>
+							{Object.entries(row).map(([, v], index) => (
+								<td key={index}>{v}</td>
+							))}
+						</tr>
+					))}
+			</tbody>
+			<tfoot>
+				<tr>
+					{tableData?.columns.map((column, index) => (
+						<th key={index}>{column.label}</th>
+					))}
+				</tr>
+			</tfoot>
+		</table>
 	);
 };
 

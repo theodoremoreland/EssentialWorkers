@@ -1,6 +1,15 @@
+section.vertical-items {
+	gap: 1.5rem;
+}
+
 .table-summary {
-	padding: 0.5rem 1rem;
 	width: 100%;
 	color: white;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 	background-color: rgb(235, 91, 59);
+}
+
+.table-section {
+	overflow: auto;
 }
