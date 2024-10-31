@@ -44,7 +44,7 @@ const ScrollingTable = (props: Props): ReactElement => {
 	const { tableData } = props;
 
 	return (
-		<table id="Table">
+		<table className="Table">
 			<thead>
 				<tr>
 					{tableData?.columns.map((column, index) => (
