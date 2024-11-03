@@ -8,11 +8,11 @@ const Hero = (): ReactElement => {
 	return (
 		<div id="hero">
 			<h1>
-				Essential Workers:
+				Essential Workers (Remixed):
 				<br />
-				Demographics across Missouri,
+				Demographics across Saint Louis,
 				<br />
-				Illinois, and Saint Louis
+				Missouri, and Illinois
 			</h1>
 		</div>
 	);
