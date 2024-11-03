@@ -31,7 +31,9 @@ const App = (): ReactElement => {
 					</p>
 					<p>
 						The interactive map below features county level data on essential
-						workers across five measures.
+						workers across three geographies (Saint Louis, Missouri, and
+						Illinois) and five measures (GDP, Labor Force, Unemployment Rate,
+						Median Income, and Frontline Industry Rate).
 					</p>
 				</section>
 				<section id="map-section">
