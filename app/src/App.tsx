@@ -54,11 +54,11 @@ const App = (): ReactElement => {
 						tableData={{
 							columns: [
 								{ label: "", field: "index" },
+								{ label: "All Workers", field: "All Workers" },
 								{
 									label: "All Frontline Industries",
 									field: "All Frontline Industries",
 								},
-								{ label: "All Workers", field: "All Workers" },
 								{
 									label: "Building Cleaning Services",
 									field: "Building Cleaning Services",
@@ -122,11 +122,11 @@ const App = (): ReactElement => {
 						tableData={{
 							columns: [
 								{ label: "", field: "index" },
+								{ label: "All Workers", field: "All Workers" },
 								{
 									label: "All Frontline Industries",
 									field: "All Frontline Industries",
 								},
-								{ label: "All Workers", field: "All Workers" },
 								{
 									label: "Building Cleaning Services",
 									field: "Building Cleaning Services",
@@ -188,11 +188,11 @@ const App = (): ReactElement => {
 						tableData={{
 							columns: [
 								{ label: "", field: "index" },
+								{ label: "All Workers", field: "All Workers" },
 								{
 									label: "All Frontline Industries",
 									field: "All Frontline Industries",
 								},
-								{ label: "All Workers", field: "All Workers" },
 								{
 									label: "Building Cleaning Services",
 									field: "Building Cleaning Services",
