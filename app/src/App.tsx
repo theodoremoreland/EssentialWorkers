@@ -107,7 +107,7 @@ const App = (): ReactElement => {
 						}}
 					/>
 				</section>
-				<section id="methodoly" className="vertical-items">
+				<section id="methodology" className="vertical-items">
 					<h2>Methodology</h2>
 					<p>
 						In generalizing frontline/essential industries, we took inspiration
