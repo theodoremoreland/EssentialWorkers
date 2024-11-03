@@ -43,9 +43,9 @@ const App = (): ReactElement => {
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
 						<b>Table 1</b> shows a demographic profile of frontline workers
-						across Greater Saint Louis. For example, of 34,205 frontline
-						workers, a notable percentage of workers lack health insurance,
-						namely those in Grocery, Convenience, & Drug Stores (22.1%).
+						across Greater Saint Louis. For example, of 7,232 frontline workers,
+						a notable percentage of workers lack health insurance, namely those
+						in Grocery, Convenience, & Drug Stores (22.1%).
 					</p>
 				</section>
 				<section className="table-section">
@@ -177,9 +177,9 @@ const App = (): ReactElement => {
 					<h2>{GeographyName.Illinois}</h2>
 					<p>
 						<b>Table 3</b> shows a demographic profile of frontline workers
-						across Illinois. For example, a notable portion of frontline workers
-						live below the poverty line (6.9%) or below 200% of the poverty line
-						(21.5%).
+						across Illinois. For example, of 1,320,714 frontline workers, a
+						notable portion live below the poverty line (6.9%) or below 200% of
+						the poverty line (21.5%).
 					</p>
 				</section>
 				<section className="table-section">
