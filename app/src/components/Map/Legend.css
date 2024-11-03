@@ -1,8 +1,8 @@
 #legend-area-container {
+	z-index: 10;
 	position: relative;
 	margin: 20px 0 0 20px;
-	width: 18%;
-	z-index: 10;
+	min-width: 18%;
 }
 
 #legend-area {
@@ -20,6 +20,7 @@
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
+	font-size: 0.8rem;
 }
 
 .legend-title {
