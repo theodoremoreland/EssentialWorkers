@@ -1,3 +1,6 @@
+// Utils
+import { formatAsLocaleNumber, formatAsPercentage } from "./utils";
+
 // Data
 import missouri_json from "./data/missouri.json";
 import illinois_json from "./data/illinois.json";
@@ -41,10 +44,6 @@ export const map_summary = {
 	[GeographyName["Saint Louis"]]:
 		"Jersey County has the lowest Frontline rate (17.88%).",
 };
-
-const formatAsLocaleNumber = (value: number): string =>
-	Number(value).toLocaleString();
-const formatAsPercentage = (value: number): string => `${value.toFixed(2)}%`;
 
 const formatRow = (row: RawRow): TableRow => {
 	if (row.index === "All Workers (16+)") {
