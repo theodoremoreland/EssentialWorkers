@@ -42,23 +42,19 @@ const App = (): ReactElement => {
 				<section id="stl" className="table-summary vertical-items">
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
-						There are 34,205 workers aged 16 and above, with 7,232 working in
-						frontline industries. Females constitute a significant portion of
-						the workforce in frontline industries, with notable representation
-						in Public Transit (85.54%) and Building Cleaning Services (75.26%).
-						Foreign-born workers are present across all frontline sectors, with
-						the highest representation in Health Care (10.64%) and Grocery,
-						Convenience, & Drug Stores (10.49%). Workers aged 50 and above are
+						<b>Table 1</b> shows a demographic profile of frontline workers
+						across Greater Saint Louis. Of 34205 frontline workers, foreign-born
+						workers are present across all frontline sectors, with the highest
+						representation in Health Care (10.64%) and Grocery, Convenience, &
+						Drug Stores (10.49%). Workers aged 50 and above are
 						well-represented, especially in Health Care (53.89%) and Childcare &
-						Social Services (48.3%). A majority of workers in frontline
-						industries own homes, with Health Care workers having the highest
-						home ownership rate (71.62%). The workforce is diverse, with
-						significant representation of Black workers in Childcare & Social
-						Services (73.3%) and Public Transit (39.28%). A portion of workers
-						live below the poverty line, with the highest in Grocery,
-						Convenience, & Drug Stores (20.31%). A notable percentage of workers
-						lack health insurance, especially in Grocery, Convenience, & Drug
-						Stores (22.1%).
+						Social Services (48.3%). The workforce is diverse, with significant
+						representation of Black workers in Childcare & Social Services
+						(73.3%) and Public Transit (39.28%). A portion of workers live below
+						the poverty line, with the highest in Grocery, Convenience, & Drug
+						Stores (20.31%). A notable percentage of workers lack health
+						insurance, especially in Grocery, Convenience, & Drug Stores
+						(22.1%).
 					</p>
 				</section>
 				<section className="table-section">
@@ -122,20 +118,17 @@ const App = (): ReactElement => {
 				<section className="table-summary vertical-items">
 					<h2>{GeographyName.Missouri}</h2>
 					<p>
-						Missouri has 2,888,430 workers aged 16 and above, with 645,170
-						employed in frontline industries. Females make up a significant
-						portion of the frontline workforce (64.9%), especially in Health
-						Care (78.1%) and Childcare & Social Services (86.8%). Workers aged
-						50 and above represent 34.2% of the frontline workforce, with
-						notable representation in Public Transit (41.0%) and Trucking,
-						Warehouse, & Postal Service (43.3%). A majority of frontline workers
-						own homes (65.7%), with the highest rates in Public Transit (69.4%).
-						The frontline workforce is predominantly White (77.6%), with
-						significant representation of Black workers (16.0%) and Hispanic
-						workers (3.0%). A notable portion of frontline workers live below
-						the poverty line (8.3%) or below 200% of the poverty line (25.6%).
-						11.2% of frontline workers lack health insurance, with the highest
-						rates in Building Cleaning Services (27.9%).
+						<b>Table 2</b> shows a demographic profile of frontline workers
+						across Missouri. Of 645,170 employed in frontline industries, women
+						make up a significant portion of the frontline workforce (64.9%),
+						especially in Health Care (78.1%) and Childcare & Social Services
+						(86.8%). Workers aged 50 and above represent 34.2% of the frontline
+						workforce, with notable representation in Public Transit (41.0%) and
+						Trucking, Warehouse, & Postal Service (43.3%). A notable portion of
+						frontline workers live below the poverty line (8.3%) or below 200%
+						of the poverty line (25.6%). 11.2% of frontline workers lack health
+						insurance, with the highest rates in Building Cleaning Services
+						(27.9%).
 					</p>
 				</section>
 				<section className="table-section">
@@ -197,22 +190,15 @@ const App = (): ReactElement => {
 				<section className="table-summary vertical-items">
 					<h2>{GeographyName.Illinois}</h2>
 					<p>
-						Illinois has 6,221,825 workers aged 16 and above, with 1,320,714
-						employed in frontline industries. Females constitute a significant
-						portion of the frontline workforce (63.7%), especially in Health
-						Care (78.3%) and Childcare & Social Services (86.1%). Foreign-born
-						workers make up 18.1% of the frontline workforce, with the highest
-						representation in Building Cleaning Services (47.1%). A majority of
-						frontline workers own homes (66.5%), with the highest rates in
-						Public Transit (69.8%). The frontline workforce is predominantly
-						White (59.9%), with significant representation of Black workers
-						(17.9%) and Hispanic workers (14.3%). Frontline workers have varying
-						education levels, with 24.4% having a high school diploma and 36.6%
-						having some college education. A notable portion of frontline
-						workers live below the poverty line (6.9%) or below 200% of the
-						poverty line (21.5%). 8.0% of frontline workers lack health
-						insurance, with the highest rates in Building Cleaning Services
-						(24.3%).
+						<b>Table 3</b> shows a demographic profile of frontline workers
+						across Illinois. Of the 1,320,714 employed in frontline industries,
+						women constitute a significant portion of the frontline workforce
+						(63.7%). Foreign-born workers make up 18.1% of the frontline
+						workforce, with the highest representation in Building Cleaning
+						Services (47.1%). Frontline workers have varying education levels,
+						with 24.4% having a high school diploma and 36.6% having some
+						college education. A notable portion of frontline workers live below
+						the poverty line (6.9%) or below 200% of the poverty line (21.5%).
 					</p>
 				</section>
 				<section className="table-section">
