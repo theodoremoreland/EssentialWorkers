@@ -1,0 +1,33 @@
+section.vertical-items {
+	gap: 0.8rem;
+}
+
+.table-summary {
+	width: 100%;
+	color: #f6f8fa;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	background-color: rgb(235, 91, 59);
+}
+
+.table-section {
+	display: block;
+	width: 87%;
+	overflow: auto;
+	padding: 0;
+
+	@media screen and (min-width: 768px) {
+		& {
+			width: 100%;
+			padding: 0 5% 0 15%;
+		}
+	}
+}
+
+#intro,
+#methodology {
+	p,
+	ul {
+		font-family: super-legible-regular;
+	}
+}

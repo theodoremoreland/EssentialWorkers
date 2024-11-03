@@ -1,0 +1,30 @@
+.Dropdown-container {
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+	label {
+		font-family: stylish-bold;
+		color: rgb(0, 30, 71);
+	}
+
+	.MuiSelect-select {
+		font-family: stylish-regular;
+	}
+
+	.Dropdown {
+		font-size: 0.7rem;
+
+		@media screen and (min-width: 1200px) {
+			& {
+				font-size: 0.8rem;
+			}
+		}
+
+		@media screen and (min-width: 1600px) {
+			& {
+				font-size: 1rem;
+			}
+		}
+	}
+}

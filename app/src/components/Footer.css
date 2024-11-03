@@ -1,0 +1,39 @@
+footer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+	font-family: stylish-light;
+	padding: 2rem;
+
+	@media screen and (min-width: 768px) {
+		& {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	.logo-container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.logo {
+		width: 40%;
+		max-width: 300px;
+		padding: 5%;
+		margin: 0;
+
+		@media screen and (min-width: 768px) {
+			& {
+				width: 50%;
+			}
+		}
+	}
+}
