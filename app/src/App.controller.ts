@@ -42,93 +42,62 @@ export const map_summary = {
 		"Jersey County has the lowest Frontline rate (17.88%).",
 };
 
-const format = (value: number) => `${value.toFixed(2)}%`;
+const formatAsLocaleNumber = (value: number): string =>
+	Number(value).toLocaleString();
+const formatAsPercentage = (value: number): string => `${value.toFixed(2)}%`;
 
-export const createRowsByCategory = (data: RawRow[]) => {
-	const formattedRows = data.map((row) => {
-		if (row.index === "All Workers (16+)")
-			return {
-				index: row.index,
-				"All Workers": Number(row["All Workers"]).toLocaleString(),
-				"All Frontline Industries": Number(
-					row["All Frontline Industries"]
-				).toLocaleString(),
-				"Grocery, Convenience, & Drug Stores": Number(
-					row["Grocery, Convenience, & Drug Stores"]
-				).toLocaleString(),
-				"Public Transit": Number(row["Public Transit"]).toLocaleString(),
-				"Trucking, Warehouse, & Postal Service": Number(
-					row["Trucking, Warehouse, & Postal Service"]
-				).toLocaleString(),
-				"Building Cleaning Services": Number(
-					row["Building Cleaning Services"]
-				).toLocaleString(),
-				"Health Care": Number(row["Health Care"]).toLocaleString(),
-				"Childcare & Social Services": Number(
-					row["Childcare & Social Services"]
-				).toLocaleString(),
-			};
-
-		const formattedRow: TableRow = {
+const formatRow = (row: RawRow): TableRow => {
+	if (row.index === "All Workers (16+)") {
+		return {
 			index: row.index,
-			"All Workers": format(row["All Workers"]),
-			"All Frontline Industries": format(row["All Frontline Industries"]),
-			"Grocery, Convenience, & Drug Stores": format(
+			"All Workers": formatAsLocaleNumber(row["All Workers"]),
+			"All Frontline Industries": formatAsLocaleNumber(
+				row["All Frontline Industries"]
+			),
+			"Grocery, Convenience, & Drug Stores": formatAsLocaleNumber(
 				row["Grocery, Convenience, & Drug Stores"]
 			),
-			"Public Transit": format(row["Public Transit"]),
-			"Trucking, Warehouse, & Postal Service": format(
+			"Public Transit": formatAsLocaleNumber(row["Public Transit"]),
+			"Trucking, Warehouse, & Postal Service": formatAsLocaleNumber(
 				row["Trucking, Warehouse, & Postal Service"]
 			),
-			"Building Cleaning Services": format(row["Building Cleaning Services"]),
-			"Health Care": format(row["Health Care"]),
-			"Childcare & Social Services": format(row["Childcare & Social Services"]),
+			"Building Cleaning Services": formatAsLocaleNumber(
+				row["Building Cleaning Services"]
+			),
+			"Health Care": formatAsLocaleNumber(row["Health Care"]),
+			"Childcare & Social Services": formatAsLocaleNumber(
+				row["Childcare & Social Services"]
+			),
 		};
-
-		return formattedRow;
-	});
+	}
 
 	return {
-		Totals: [formattedRows[0]],
-		Miscellaneous: [
-			formattedRows[1],
-			formattedRows[2],
-			formattedRows[3],
-			formattedRows[4],
-			formattedRows[5],
-		],
-		"Full/Part-time": [formattedRows[6], formattedRows[7]],
-		"Race/Ethnicity": [
-			formattedRows[8],
-			formattedRows[9],
-			formattedRows[10],
-			formattedRows[11],
-			formattedRows[12],
-		],
-		"Education Level": [
-			formattedRows[13],
-			formattedRows[14],
-			formattedRows[15],
-			formattedRows[16],
-			formattedRows[17],
-		],
-		"Compensation and Benefits": [
-			formattedRows[18],
-			formattedRows[19],
-			formattedRows[20],
-		],
-		"Family Responsibilities": [formattedRows[21], formattedRows[22]],
+		index: row.index,
+		"All Workers": formatAsPercentage(row["All Workers"]),
+		"All Frontline Industries": formatAsPercentage(
+			row["All Frontline Industries"]
+		),
+		"Grocery, Convenience, & Drug Stores": formatAsPercentage(
+			row["Grocery, Convenience, & Drug Stores"]
+		),
+		"Public Transit": formatAsPercentage(row["Public Transit"]),
+		"Trucking, Warehouse, & Postal Service": formatAsPercentage(
+			row["Trucking, Warehouse, & Postal Service"]
+		),
+		"Building Cleaning Services": formatAsPercentage(
+			row["Building Cleaning Services"]
+		),
+		"Health Care": formatAsPercentage(row["Health Care"]),
+		"Childcare & Social Services": formatAsPercentage(
+			row["Childcare & Social Services"]
+		),
 	};
 };
 
-export const tables = {
-	[GeographyName.Missouri]: {
-		rowsByCategory: createRowsByCategory(missouri_json),
-	},
-	[GeographyName.Illinois]: {
-		rowsByCategory: createRowsByCategory(illinois_json),
-	},
-	[GeographyName["Saint Louis"]]: {
-		rowsByCategory: createRowsByCategory(stl_json),
-	},
+export const tables: {
+	[geography in GeographyName]: TableRow[];
+} = {
+	[GeographyName.Missouri]: missouri_json.map(formatRow),
+	[GeographyName.Illinois]: illinois_json.map(formatRow),
+	[GeographyName["Saint Louis"]]: stl_json.map(formatRow),
 };

@@ -53,57 +53,13 @@ const App = (): ReactElement => {
 						id="table-1"
 						tableData={{
 							columns: [
-								{ label: "", field: "index" },
-								{ label: "All Workers", field: "All Workers" },
-								{
-									label: "All Frontline Industries",
-									field: "All Frontline Industries",
-								},
-								{
-									label: "Building Cleaning Services",
-									field: "Building Cleaning Services",
-								},
-								{
-									label: "Childcare & Social Services",
-									field: "Childcare & Social Services",
-								},
-								{
-									label: "Grocery, Convenience, & Drug Stores",
-									field: "Grocery, Convenience, & Drug Stores",
-								},
-								{ label: "Health Care", field: "Health Care" },
-								{
-									label: "Public Transit",
-									field: "Public Transit",
-								},
-								{
-									label: "Trucking, Warehouse, & Postal Service",
-									field: "Trucking, Warehouse, & Postal Service",
-								},
+								...Object.keys(tables[GeographyName["Saint Louis"]][0]).map(
+									(key) => {
+										return { label: key === "index" ? "" : key, field: key };
+									}
+								),
 							],
-							rows: [
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Totals"
-								],
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Miscellaneous"
-								],
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Full/Part-time"
-								],
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Race/Ethnicity"
-								],
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Education Level"
-								],
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Compensation and Benefits"
-								],
-								...tables[GeographyName["Saint Louis"]].rowsByCategory[
-									"Family Responsibilities"
-								],
-							],
+							rows: tables[GeographyName["Saint Louis"]],
 						}}
 					/>
 				</section>
@@ -121,55 +77,11 @@ const App = (): ReactElement => {
 						id="table-2"
 						tableData={{
 							columns: [
-								{ label: "", field: "index" },
-								{ label: "All Workers", field: "All Workers" },
-								{
-									label: "All Frontline Industries",
-									field: "All Frontline Industries",
-								},
-								{
-									label: "Building Cleaning Services",
-									field: "Building Cleaning Services",
-								},
-								{
-									label: "Childcare & Social Services",
-									field: "Childcare & Social Services",
-								},
-								{
-									label: "Grocery, Convenience, & Drug Stores",
-									field: "Grocery, Convenience, & Drug Stores",
-								},
-								{ label: "Health Care", field: "Health Care" },
-								{
-									label: "Public Transit",
-									field: "Public Transit",
-								},
-								{
-									label: "Trucking, Warehouse, & Postal Service",
-									field: "Trucking, Warehouse, & Postal Service",
-								},
+								...Object.keys(tables[GeographyName.Missouri][0]).map((key) => {
+									return { label: key === "index" ? "" : key, field: key };
+								}),
 							],
-							rows: [
-								...tables[GeographyName.Missouri].rowsByCategory["Totals"],
-								...tables[GeographyName.Missouri].rowsByCategory[
-									"Miscellaneous"
-								],
-								...tables[GeographyName.Missouri].rowsByCategory[
-									"Full/Part-time"
-								],
-								...tables[GeographyName.Missouri].rowsByCategory[
-									"Race/Ethnicity"
-								],
-								...tables[GeographyName.Missouri].rowsByCategory[
-									"Education Level"
-								],
-								...tables[GeographyName.Missouri].rowsByCategory[
-									"Compensation and Benefits"
-								],
-								...tables[GeographyName.Missouri].rowsByCategory[
-									"Family Responsibilities"
-								],
-							],
+							rows: tables[GeographyName.Missouri],
 						}}
 					/>
 				</section>
@@ -187,55 +99,11 @@ const App = (): ReactElement => {
 						id="table-3"
 						tableData={{
 							columns: [
-								{ label: "", field: "index" },
-								{ label: "All Workers", field: "All Workers" },
-								{
-									label: "All Frontline Industries",
-									field: "All Frontline Industries",
-								},
-								{
-									label: "Building Cleaning Services",
-									field: "Building Cleaning Services",
-								},
-								{
-									label: "Childcare & Social Services",
-									field: "Childcare & Social Services",
-								},
-								{
-									label: "Grocery, Convenience, & Drug Stores",
-									field: "Grocery, Convenience, & Drug Stores",
-								},
-								{ label: "Health Care", field: "Health Care" },
-								{
-									label: "Public Transit",
-									field: "Public Transit",
-								},
-								{
-									label: "Trucking, Warehouse, & Postal Service",
-									field: "Trucking, Warehouse, & Postal Service",
-								},
+								...Object.keys(tables[GeographyName.Illinois][0]).map((key) => {
+									return { label: key === "index" ? "" : key, field: key };
+								}),
 							],
-							rows: [
-								...tables[GeographyName.Illinois].rowsByCategory["Totals"],
-								...tables[GeographyName.Illinois].rowsByCategory[
-									"Miscellaneous"
-								],
-								...tables[GeographyName.Illinois].rowsByCategory[
-									"Full/Part-time"
-								],
-								...tables[GeographyName.Illinois].rowsByCategory[
-									"Race/Ethnicity"
-								],
-								...tables[GeographyName.Illinois].rowsByCategory[
-									"Education Level"
-								],
-								...tables[GeographyName.Illinois].rowsByCategory[
-									"Compensation and Benefits"
-								],
-								...tables[GeographyName.Illinois].rowsByCategory[
-									"Family Responsibilities"
-								],
-							],
+							rows: tables[GeographyName.Illinois],
 						}}
 					/>
 				</section>
