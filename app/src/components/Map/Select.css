@@ -11,4 +11,16 @@
 	.MuiSelect-select {
 		font-family: stylish-regular;
 	}
+
+	.Dropdown {
+		font-size: 0.7rem;
+
+		@media screen and (min-width: 1200px) {
+			font-size: 0.8rem;
+		}
+
+		@media screen and (min-width: 1600px) {
+			font-size: 1rem;
+		}
+	}
 }
