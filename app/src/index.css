@@ -85,8 +85,6 @@ p,
 ul {
 	width: 100%;
 	font-size: 1.3rem;
-	text-align: justify;
-	text-justify: inter-word;
 	line-height: 1.4;
 	margin: 0;
 }

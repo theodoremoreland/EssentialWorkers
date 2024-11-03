@@ -43,18 +43,16 @@ const App = (): ReactElement => {
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
 						<b>Table 1</b> shows a demographic profile of frontline workers
-						across Greater Saint Louis. Of 34205 frontline workers, foreign-born
-						workers are present across all frontline sectors, with the highest
-						representation in Health Care (10.64%) and Grocery, Convenience, &
-						Drug Stores (10.49%). Workers aged 50 and above are
-						well-represented, especially in Health Care (53.89%) and Childcare &
-						Social Services (48.3%). The workforce is diverse, with significant
+						across Greater Saint Louis. Of 34205 frontline workers some notable
+						findings include, foreign-born workers are present across all
+						frontline sectors, with the highest representation in Health Care
+						(10.64%) and Grocery, Convenience, & Drug Stores (10.49%); workers
+						aged 50 and above are well-represented, especially in Health Care
+						(53.89%) and Childcare & Social Services (48.3%); significant
 						representation of Black workers in Childcare & Social Services
-						(73.3%) and Public Transit (39.28%). A portion of workers live below
-						the poverty line, with the highest in Grocery, Convenience, & Drug
-						Stores (20.31%). A notable percentage of workers lack health
-						insurance, especially in Grocery, Convenience, & Drug Stores
-						(22.1%).
+						(73.3%) and Public Transit (39.28%); a notable percentage of workers
+						lack health insurance, especially in Grocery, Convenience, & Drug
+						Stores (22.1%).
 					</p>
 				</section>
 				<section className="table-section">
@@ -268,7 +266,7 @@ const App = (): ReactElement => {
 						>
 							Center for Economic and Policy Research
 						</a>
-						. Essential industry group features various, more specific
+						. An essential industry group features various, more specific
 						industries, each classified by the Census Bureau's Industry Codes:
 					</p>
 					<ul id="groupings">
@@ -277,7 +275,7 @@ const App = (): ReactElement => {
 							merchant wholesalers (4470), Supermarkets and other grocery stores
 							(4971), Convenience Stores (4972), Pharmacies and drug stores
 							(5070), and General merchandise stores, including warehouse clubs
-							and supercenters (5391)
+							and supercenters (5391).
 						</li>
 						<li>
 							Public Transit: Rail transportation (6080) and Bus service and
