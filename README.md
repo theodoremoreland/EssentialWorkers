@@ -13,8 +13,10 @@ The Essentials Workers webpage provides an overview of data regarding essential 
 
 - TypeScript
 - JavaScript
-- Python
 - React
+- HTML
+- CSS
+- Material UI (MUI)
 - MapBox
 - Docker
 - Vite
