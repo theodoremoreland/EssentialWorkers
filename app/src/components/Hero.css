@@ -37,9 +37,21 @@
 	height: 100%;
 	background-color: #1b375dc9;
 	color: white;
-	font-size: 2rem;
+	font-size: 0.9rem;
 	font-weight: 900;
 	font-family: stylish-bold;
 	text-align: left;
 	padding-left: 2%;
+
+	@media screen and (min-width: 768px) {
+		& {
+			font-size: 1.3rem;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		& {
+			font-size: 2rem;
+		}
+	}
 }
