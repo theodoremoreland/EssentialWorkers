@@ -9,7 +9,7 @@ import Table from "./components/Table/Table";
 import Footer from "./components/Footer";
 
 // Controller
-import { tables, GeographyName } from "./App.controller";
+import { tableRows, GeographyName } from "./App.controller";
 
 // Styles
 import "./App.css";
@@ -53,13 +53,13 @@ const App = (): ReactElement => {
 						id="table-1"
 						tableData={{
 							columns: [
-								...Object.keys(tables[GeographyName["Saint Louis"]][0]).map(
+								...Object.keys(tableRows[GeographyName["Saint Louis"]][0]).map(
 									(key) => {
 										return { label: key === "index" ? "" : key, field: key };
 									}
 								),
 							],
-							rows: tables[GeographyName["Saint Louis"]],
+							rows: tableRows[GeographyName["Saint Louis"]],
 						}}
 					/>
 				</section>
@@ -77,11 +77,13 @@ const App = (): ReactElement => {
 						id="table-2"
 						tableData={{
 							columns: [
-								...Object.keys(tables[GeographyName.Missouri][0]).map((key) => {
-									return { label: key === "index" ? "" : key, field: key };
-								}),
+								...Object.keys(tableRows[GeographyName.Missouri][0]).map(
+									(key) => {
+										return { label: key === "index" ? "" : key, field: key };
+									}
+								),
 							],
-							rows: tables[GeographyName.Missouri],
+							rows: tableRows[GeographyName.Missouri],
 						}}
 					/>
 				</section>
@@ -99,11 +101,13 @@ const App = (): ReactElement => {
 						id="table-3"
 						tableData={{
 							columns: [
-								...Object.keys(tables[GeographyName.Illinois][0]).map((key) => {
-									return { label: key === "index" ? "" : key, field: key };
-								}),
+								...Object.keys(tableRows[GeographyName.Illinois][0]).map(
+									(key) => {
+										return { label: key === "index" ? "" : key, field: key };
+									}
+								),
 							],
-							rows: tables[GeographyName.Illinois],
+							rows: tableRows[GeographyName.Illinois],
 						}}
 					/>
 				</section>

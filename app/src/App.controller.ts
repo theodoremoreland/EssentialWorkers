@@ -93,7 +93,7 @@ const formatRow = (row: RawRow): TableRow => {
 	};
 };
 
-export const tables: {
+export const tableRows: {
 	[geography in GeographyName]: TableRow[];
 } = {
 	[GeographyName.Missouri]: missouri_json.map(formatRow),
