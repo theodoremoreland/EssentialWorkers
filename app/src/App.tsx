@@ -57,6 +57,7 @@ const App = (): ReactElement => {
 				</section>
 				<section className="table-section">
 					<Table
+						id="table-1"
 						tableData={{
 							columns: [
 								{ label: "", field: "index" },
@@ -131,6 +132,7 @@ const App = (): ReactElement => {
 				</section>
 				<section className="table-section">
 					<Table
+						id="table-2"
 						tableData={{
 							columns: [
 								{ label: "", field: "index" },
@@ -201,6 +203,7 @@ const App = (): ReactElement => {
 				</section>
 				<section className="table-section">
 					<Table
+						id="table-3"
 						tableData={{
 							columns: [
 								{ label: "", field: "index" },

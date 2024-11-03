@@ -8,6 +8,7 @@ import { TableRow } from "../../App.controller";
 import "./Table.css";
 
 interface Props {
+	id: string;
 	tableData:
 		| {
 				columns: {
@@ -40,11 +41,12 @@ const groupings: {
 	"Child in home": "Family Responsibilities",
 	"Senior (age 65+) in home": "Family Responsibilities",
 };
-const ScrollingTable = (props: Props): ReactElement => {
-	const { tableData } = props;
+
+const Table = (props: Props): ReactElement => {
+	const { id, tableData } = props;
 
 	return (
-		<table className="Table">
+		<table id={id} className="Table">
 			<thead>
 				<tr>
 					{tableData?.columns.map((column, index) => (
@@ -174,4 +176,4 @@ const ScrollingTable = (props: Props): ReactElement => {
 	);
 };
 
-export default ScrollingTable;
+export default Table;
