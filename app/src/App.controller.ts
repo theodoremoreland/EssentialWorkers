@@ -46,7 +46,28 @@ const format = (value: number) => `${value.toFixed(2)}%`;
 
 export const createRowsByCategory = (data: RawRow[]) => {
 	const formattedRows = data.map((row) => {
-		if (row.index === "All Workers (16+)") return row;
+		if (row.index === "All Workers (16+)")
+			return {
+				index: row.index,
+				"All Workers": Number(row["All Workers"]).toLocaleString(),
+				"All Frontline Industries": Number(
+					row["All Frontline Industries"]
+				).toLocaleString(),
+				"Grocery, Convenience, & Drug Stores": Number(
+					row["Grocery, Convenience, & Drug Stores"]
+				).toLocaleString(),
+				"Public Transit": Number(row["Public Transit"]).toLocaleString(),
+				"Trucking, Warehouse, & Postal Service": Number(
+					row["Trucking, Warehouse, & Postal Service"]
+				).toLocaleString(),
+				"Building Cleaning Services": Number(
+					row["Building Cleaning Services"]
+				).toLocaleString(),
+				"Health Care": Number(row["Health Care"]).toLocaleString(),
+				"Childcare & Social Services": Number(
+					row["Childcare & Social Services"]
+				).toLocaleString(),
+			};
 
 		const formattedRow: TableRow = {
 			index: row.index,
