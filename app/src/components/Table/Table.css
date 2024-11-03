@@ -1,7 +1,7 @@
 .Table {
 	position: relative;
 	width: 100%;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	border-collapse: collapse;
 
 	thead th {
@@ -47,7 +47,7 @@
 		}
 
 		tr.group-header {
-			font-family: footer;
+			font-family: stylish-light;
 			background-color: #1b365d !important;
 			color: whitesmoke !important;
 		}

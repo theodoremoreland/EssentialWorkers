@@ -1,16 +1,21 @@
 @font-face {
-	font-family: hero;
+	font-family: stylish-bold;
 	src: url("./assets/fonts/Comfortaa-Bold.ttf");
 }
 
 @font-face {
-	font-family: body;
-	src: url("./assets/fonts/SourceSansPro-Light.ttf");
+	font-family: stylish-regular;
+	src: url("./assets/fonts/Comfortaa-Regular.ttf");
 }
 
 @font-face {
-	font-family: footer;
-	src: url("./assets/fonts/OpenSans-Light.ttf");
+	font-family: super-legible-regular;
+	src: url("./assets/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+	font-family: stylish-light;
+	src: url("./assets/fonts/Comfortaa-Light.ttf");
 }
 
 * {
@@ -18,7 +23,7 @@
 }
 
 html {
-	font-family: body;
+	font-family: stylish-regular;
 }
 
 html,
@@ -54,7 +59,7 @@ main {
 		}
 
 		h2 {
-			font-size: 1.75rem;
+			font-size: 1.5rem;
 			width: 100%;
 		}
 	}
@@ -84,7 +89,7 @@ h6 {
 p,
 ul {
 	width: 100%;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	line-height: 1.4;
 	margin: 0;
 }

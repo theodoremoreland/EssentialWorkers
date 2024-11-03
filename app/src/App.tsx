@@ -22,7 +22,7 @@ const App = (): ReactElement => {
 			<Navbar />
 			<Hero />
 			<main>
-				<section className="vertical-items">
+				<section id="intro" className="vertical-items">
 					<p>
 						Essential workers are shouldering the responsibility of providing
 						fundamental products and services during the COVID-19 pandemic all

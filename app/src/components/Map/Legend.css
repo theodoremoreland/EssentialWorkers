@@ -39,12 +39,12 @@
 }
 
 .legend-title {
-	font-family: hero;
+	font-family: stylish-bold;
 	color: rgb(0, 30, 71);
 }
 
 .legend-descriptionz {
-	font-family: footer;
+	font-family: stylish-light;
 	font-weight: bold;
 }
 

@@ -5,6 +5,7 @@ footer {
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
+	font-family: stylish-light;
 	padding: 2rem;
 
 	@media screen and (min-width: 768px) {

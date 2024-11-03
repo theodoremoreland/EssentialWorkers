@@ -13,3 +13,11 @@ section.vertical-items {
 .table-section {
 	overflow: auto;
 }
+
+#intro,
+#methodology {
+	p,
+	ul {
+		font-family: super-legible-regular;
+	}
+}
