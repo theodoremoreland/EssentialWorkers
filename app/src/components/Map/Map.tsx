@@ -2,15 +2,12 @@
 import { useRef, useEffect, useState, ChangeEvent, ReactElement } from "react";
 import ReactDOM from "react-dom";
 
-// Material UI
-import Hidden from "@mui/material/Hidden";
-
 // Mapbox
 import mapboxgl, { GeoJSONFeature, Map, Popup } from "mapbox-gl";
 
 // Custom Components
-import { FilterLarge, FilterSmall } from "./Filter";
-import { LegendLarge, LegendSmall } from "./Legend";
+import Filter from "./Filter";
+import Legend from "./Legend";
 import Tooltip from "./Tooltip";
 
 // Data
@@ -290,24 +287,11 @@ const MapWrapper = (props: Props): ReactElement => {
 
 	return (
 		<>
-			{/* Filter (above map) */}
-			<Hidden lgUp>
-				<FilterSmall radio={selectedMeasure} updateRadio={updateRadio} />
-			</Hidden>
 			<div id="map-container">
-				<Hidden only={["xs", "sm", "md"]}>
-					{/* Filter (atop map) */}
-					<FilterLarge radio={selectedMeasure} updateRadio={updateRadio} />
-					{/* Legend (atop map) */}
-					<LegendLarge legendObj={legendData[selectedMeasure]} />
-				</Hidden>
-				{/* Map */}
+				<Filter radio={selectedMeasure} updateRadio={updateRadio} />
+				<Legend legendObj={legendData[selectedMeasure]} />
 				<div className="map-container" ref={mapContainerRef} />
 			</div>
-			{/* Legend (below map) */}
-			<Hidden lgUp>
-				<LegendSmall legendObj={legendData[selectedMeasure]} />
-			</Hidden>
 		</>
 	);
 };

@@ -3,7 +3,6 @@ import { ReactElement } from "react";
 
 // Material UI
 import StopIcon from "@mui/icons-material/Stop";
-import Typography from "@mui/material/Typography";
 
 // Styles
 import "./Legend.css";
@@ -17,7 +16,7 @@ interface Props {
 	};
 }
 
-export const LegendLarge = (props: Props): ReactElement => {
+const Legend = (props: Props): ReactElement => {
 	const { legendObj } = props;
 	const { stops, description, stopLabels, palette } = legendObj;
 
@@ -46,27 +45,4 @@ export const LegendLarge = (props: Props): ReactElement => {
 	);
 };
 
-export const LegendSmall = (props: Props): ReactElement => {
-	const { legendObj } = props;
-	const { stops, description, stopLabels, palette } = legendObj;
-
-	return (
-		<div id="legend-area-container-small">
-			<div id="legend-area-small">
-				<Typography className="legend-title">Legend</Typography>
-				<Typography className="legend-description">{description}</Typography>
-				{stops.map((_, index: number) => (
-					<>
-						<span key={stopLabels[index]} className="legend-values">
-							{stopLabels[index]}
-						</span>{" "}
-						<StopIcon
-							className="legend-colors"
-							style={{ color: palette[index] }}
-						/>
-					</>
-				))}
-			</div>
-		</div>
-	);
-};
+export default Legend;
