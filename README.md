@@ -1,4 +1,4 @@
-# Essential Workers 2024
+# Essential Workers
 
 ## Table of contents
 
@@ -7,7 +7,25 @@
 
 ## Overview
 
-The Essentials Workers webpage provides an overview of data regarding essential workers across Missouri and Illinois. The page features an interactive map and static table. The interactive map represents one of three geographies (Missouri, Illinois, or Saint Louis) and five measures (Gross Domestic Profit, Labor Force, Unemployment Rate, Median Income, and Frontline Rate). The table features a demographic breakdown of data relating to each of the aforementioned geographies by "Frontline Industry" (such as Health Care, Public Transit, and Grocery, Convenience, and Drug Stores).
+This repository is a fork and update to [Saint Louis Regional Data Alliance's](https://github.com/stlrda) [essential-workers](https://github.com/stlrda/essential-workers), which is a webpage illustrating demographic profiles (2018) of essential workers across Saint Louis, Missouri, and Illinois.
+
+I was one of a few developers on the original project. It was actually my first attempt at a responsive webpage. I decided to update the webpage including, but not limited to the following:
+
+- Updated layout (for simplicity, consistency between mobile and desktop, and overall UX)
+- Updated typography (improved consistency, contrast, and overall UX)
+- Fixed typos
+- Streamlined map controls for changing geography and measure (for improved consistency between mobile and desktop)
+- Formatted display of certain numbers (percentages, currencies, large numbers)
+- Corrected bugs with data and data tables that resulted in inaccurate values in columns and rows
+- Correct bug with `MapBox` implementation that resulted in needless re-renders
+- Streamlined styling logic resulting in less code, improved responsiveness, and better performance
+- Updated codebase to `React` 18
+- Migrated from `CRA` to `Vite` for faster build times
+- Removed deprecated `mdbreactbootstrap` library and replaced with default HTML table elements
+- Removed deprecated `Material UI` components in favor of `MUI` components
+- Removed any layout base uses of `Material UI` in favor of custom CSS
+- Now uses `TypeScript`
+- Refactors to every file for improved DX
 
 ## Technologies used
 
