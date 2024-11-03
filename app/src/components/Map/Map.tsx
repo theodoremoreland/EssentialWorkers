@@ -1,12 +1,15 @@
 // React
-import { useRef, useEffect, useState, ChangeEvent, ReactElement } from "react";
+import { useRef, useEffect, useState, ReactElement } from "react";
 import ReactDOM from "react-dom";
 
 // Mapbox
 import mapboxgl, { GeoJSONFeature, Map, Popup } from "mapbox-gl";
 
-// Custom Components
-import Filter from "./Filter";
+// Custom
+import { GeographyName } from "../../App.controller";
+
+// Components
+import Dropdown from "./Select";
 import Legend from "./Legend";
 import Tooltip from "./Tooltip";
 
@@ -17,10 +20,6 @@ import il_counties_raw from "../../data/geojson/IL_Stats.geojson?raw";
 
 // Styles
 import "./Map.css";
-
-interface Props {
-	selectedTableName: string;
-}
 
 // Token
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
@@ -156,17 +155,20 @@ const legendData: {
 const mapViews: {
 	[key: string]: { center: [number, number]; zoom: number };
 } = {
-	Missouri: { center: [-91.8318, 37.9643], zoom: 5 },
-	Illinois: { center: [-88.3985, 39.6331], zoom: 5 },
-	"Saint Louis": { center: [-90.1998378, 38.6264178], zoom: 7 },
+	[GeographyName.Missouri]: { center: [-91.8318, 37.9643], zoom: 5 },
+	[GeographyName.Illinois]: { center: [-88.3985, 39.6331], zoom: 5 },
+	[GeographyName["Saint Louis"]]: {
+		center: [-90.1998378, 38.6264178],
+		zoom: 7,
+	},
 };
 
-const initialSelectedTableName: string = "Missouri";
-const initialLng: number = mapViews[initialSelectedTableName].center[0];
-const initialLat: number = mapViews[initialSelectedTableName].center[1];
-const initialZoom: number = mapViews[initialSelectedTableName].zoom;
+const initialSelectedGeography: GeographyName = GeographyName["Saint Louis"];
+const initialLng: number = mapViews[initialSelectedGeography].center[0];
+const initialLat: number = mapViews[initialSelectedGeography].center[1];
+const initialZoom: number = mapViews[initialSelectedGeography].zoom;
 const initialSourceData: GeoJSON.FeatureCollection =
-	data[initialSelectedTableName];
+	data[initialSelectedGeography];
 const initialMeasure: string = "GDP (Thousands of dollars)";
 const initialDataLayer: {
 	id: string;
@@ -192,19 +194,16 @@ const initialDataLayer: {
 	},
 };
 
-const MapWrapper = (props: Props): ReactElement => {
-	const { selectedTableName } = props;
-
+const MapWrapper = (): ReactElement => {
+	const [selectedGeography, setSelectedGeography] = useState<GeographyName>(
+		initialSelectedGeography
+	);
 	const [selectedMeasure, setSelectedMeasure] =
 		useState<string>(initialMeasure);
 
 	const mapContainerRef = useRef<HTMLDivElement | null>(null);
 	const mapRef = useRef<Map | null>(null);
 	const tooltipRef = useRef<Popup>(new mapboxgl.Popup({ offset: 15 }));
-
-	const updateRadio = (event: ChangeEvent<HTMLInputElement>): void => {
-		setSelectedMeasure(event.target.value);
-	};
 
 	// Initialize map when component mounts
 	useEffect(() => {
@@ -267,13 +266,13 @@ const MapWrapper = (props: Props): ReactElement => {
 
 	// Updates Geography
 	useEffect(() => {
-		if (mapRef.current && selectedTableName) {
-			mapRef.current.easeTo(mapViews[selectedTableName]);
+		if (mapRef.current && selectedGeography) {
+			mapRef.current.easeTo(mapViews[selectedGeography]);
 			(
 				mapRef.current.getSource("source-data") as mapboxgl.GeoJSONSource
-			)?.setData(data[selectedTableName]);
+			)?.setData(data[selectedGeography]);
 		}
-	}, [selectedTableName]);
+	}, [selectedGeography]);
 
 	// Updates Measure
 	useEffect(() => {
@@ -286,13 +285,32 @@ const MapWrapper = (props: Props): ReactElement => {
 	}, [selectedMeasure]);
 
 	return (
-		<>
-			<div id="map-container">
-				<Filter radio={selectedMeasure} updateRadio={updateRadio} />
-				<Legend legendObj={legendData[selectedMeasure]} />
-				<div className="map-container" ref={mapContainerRef} />
-			</div>
-		</>
+		<div id="map-container-wrapper">
+			<Legend legendObj={legendData[selectedMeasure]} />
+			<form id="map-form">
+				<Dropdown
+					label="Geography"
+					selectedValue={selectedGeography}
+					setSelectedValue={(value: string) =>
+						setSelectedGeography(value as GeographyName)
+					}
+					options={Object.keys(GeographyName).map((geography) => ({
+						value: geography,
+						label: geography,
+					}))}
+				/>
+				<Dropdown
+					label="Measure"
+					selectedValue={selectedMeasure}
+					setSelectedValue={setSelectedMeasure}
+					options={Object.keys(legendData).map((measure) => ({
+						value: measure,
+						label: measure,
+					}))}
+				/>
+			</form>
+			<div id="map-container" ref={mapContainerRef} />
+		</div>
 	);
 };
 

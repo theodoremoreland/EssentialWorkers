@@ -21,8 +21,8 @@ const Legend = (props: Props): ReactElement => {
 	const { stops, description, stopLabels, palette } = legendObj;
 
 	return (
-		<div id="legend-area-container-large">
-			<div id="legend-area-large">
+		<div id="legend-area-container">
+			<div id="legend-area">
 				<h6 className="legend-title" style={{ marginBottom: "1%" }}>
 					Legend
 				</h6>

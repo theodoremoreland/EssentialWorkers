@@ -1,5 +1,5 @@
 // React
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -15,8 +15,6 @@ import { tables, GeographyName } from "./App.controller";
 import "./App.css";
 
 const App = (): ReactElement => {
-	const [selectedTableName] = useState<GeographyName>(GeographyName.Missouri);
-
 	return (
 		<>
 			<Navbar />
@@ -37,7 +35,7 @@ const App = (): ReactElement => {
 					</p>
 				</section>
 				<section id="map-section">
-					<Map selectedTableName={selectedTableName} />
+					<Map />
 				</section>
 				<section id="stl" className="table-summary vertical-items">
 					<h2>{GeographyName["Saint Louis"]}</h2>
