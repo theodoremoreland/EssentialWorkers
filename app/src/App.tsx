@@ -43,16 +43,9 @@ const App = (): ReactElement => {
 					<h2>{GeographyName["Saint Louis"]}</h2>
 					<p>
 						<b>Table 1</b> shows a demographic profile of frontline workers
-						across Greater Saint Louis. Of 34205 frontline workers some notable
-						findings include, foreign-born workers are present across all
-						frontline sectors, with the highest representation in Health Care
-						(10.64%) and Grocery, Convenience, & Drug Stores (10.49%); workers
-						aged 50 and above are well-represented, especially in Health Care
-						(53.89%) and Childcare & Social Services (48.3%); significant
-						representation of Black workers in Childcare & Social Services
-						(73.3%) and Public Transit (39.28%); a notable percentage of workers
-						lack health insurance, especially in Grocery, Convenience, & Drug
-						Stores (22.1%).
+						across Greater Saint Louis. For example, of 34,205 frontline
+						workers, a notable percentage of workers lack health insurance,
+						namely those in Grocery, Convenience, & Drug Stores (22.1%).
 					</p>
 				</section>
 				<section className="table-section">
@@ -118,16 +111,9 @@ const App = (): ReactElement => {
 					<h2>{GeographyName.Missouri}</h2>
 					<p>
 						<b>Table 2</b> shows a demographic profile of frontline workers
-						across Missouri. Of 645,170 employed in frontline industries, women
-						make up a significant portion of the frontline workforce (64.9%),
-						especially in Health Care (78.1%) and Childcare & Social Services
-						(86.8%). Workers aged 50 and above represent 34.2% of the frontline
-						workforce, with notable representation in Public Transit (41.0%) and
-						Trucking, Warehouse, & Postal Service (43.3%). A notable portion of
-						frontline workers live below the poverty line (8.3%) or below 200%
-						of the poverty line (25.6%). 11.2% of frontline workers lack health
-						insurance, with the highest rates in Building Cleaning Services
-						(27.9%).
+						across Missouri. For example, of 645,170 employed in frontline
+						industries, workers aged 50 and above represent 34.2% of the
+						frontline workforce.
 					</p>
 				</section>
 				<section className="table-section">
@@ -191,14 +177,9 @@ const App = (): ReactElement => {
 					<h2>{GeographyName.Illinois}</h2>
 					<p>
 						<b>Table 3</b> shows a demographic profile of frontline workers
-						across Illinois. Of the 1,320,714 employed in frontline industries,
-						women constitute a significant portion of the frontline workforce
-						(63.7%). Foreign-born workers make up 18.1% of the frontline
-						workforce, with the highest representation in Building Cleaning
-						Services (47.1%). Frontline workers have varying education levels,
-						with 24.4% having a high school diploma and 36.6% having some
-						college education. A notable portion of frontline workers live below
-						the poverty line (6.9%) or below 200% of the poverty line (21.5%).
+						across Illinois. For example, a notable portion of frontline workers
+						live below the poverty line (6.9%) or below 200% of the poverty line
+						(21.5%).
 					</p>
 				</section>
 				<section className="table-section">
