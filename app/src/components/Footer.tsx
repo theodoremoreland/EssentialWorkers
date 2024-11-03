@@ -1,10 +1,6 @@
 // React
 import { ReactElement } from "react";
 
-// Images
-import rdaLogo from "../assets/images/RDA-Primary-Logo.png";
-import daughertyLogo from "../assets/images/Daugherty_Logo.png";
-
 // Styles
 import "./Footer.css";
 
@@ -12,17 +8,9 @@ const Footer = (): ReactElement => {
 	return (
 		<footer>
 			<p>
-				The Essential Workers project was developed by the{" "}
+				The Essential Workers project was originally developed by the{" "}
 				<a target="_blank" rel="noopener noreferrer" href="http://stldata.org">
 					St. Louis Regional Data Alliance{" "}
-				</a>
-				in partnership with{" "}
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					href="http://daugherty.com"
-				>
-					Daugherty Business Solutions
 				</a>
 				. The data used in this project was collected from the Census Bureau (
 				<a
@@ -44,14 +32,6 @@ const Footer = (): ReactElement => {
 				). All of the data collected can be downloaded by clicking on the
 				"Download Data" button to the right of the navigation bar.
 			</p>
-			<div className="logo-container">
-				<img src={rdaLogo} className="logo" alt="Regional Data Alliance Logo" />
-				<img
-					src={daughertyLogo}
-					className="logo"
-					alt="Daugherty Business Solutions Logo"
-				/>
-			</div>
 		</footer>
 	);
 };
