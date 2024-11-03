@@ -1,4 +1,4 @@
-# Essential Workers
+# Essential Workers Remixed
 
 <img src="/presentation/thumbnail.webp" width="650">
 
