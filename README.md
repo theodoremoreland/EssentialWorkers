@@ -7,7 +7,7 @@
 
 ## Overview
 
-This repository is a fork and update to [Saint Louis Regional Data Alliance's](https://github.com/stlrda) [essential-workers](https://github.com/stlrda/essential-workers), which is a webpage illustrating demographic profiles (2018) of essential workers across Saint Louis, Missouri, and Illinois.
+This repository is a fork and update to `Saint Louis Regional Data Alliance's` [essential-workers](https://github.com/stlrda/essential-workers), which is a webpage illustrating demographic profiles (2018) of essential workers across Saint Louis, Missouri, and Illinois.
 
 I was one of a few developers on the original project. It was actually my first attempt at a responsive webpage. I decided to update the webpage including, but not limited to the following:
 
