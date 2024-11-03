@@ -1,9 +1,16 @@
 # Essential Workers
 
+<img src="/presentation/thumbnail.webp" width="650">
+
+[View the application](https://master.d297qlsooqzdtx.amplifyapp.com/)
+
 ## Table of contents
+
+[View the application](https://master.d297qlsooqzdtx.amplifyapp.com/)
 
 - [Overview](#overview)
 - [Technologies used](#technologies-used)
+- [Screenshots](#screenshots)
 
 ## Overview
 
@@ -39,3 +46,5 @@ I was one of a few developers on the original project. It was actually my first 
 - MapBox
 - Docker
 - Vite
+
+## Screenshots
