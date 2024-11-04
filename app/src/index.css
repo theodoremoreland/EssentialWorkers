@@ -19,19 +19,13 @@
 }
 
 :root {
-    --primary-color: #f6f8fa;
-    --secondary-color: #1b365d;
-    --tertiary-color: rgb(235, 91, 59);
-    --quaternary-color: rgb(0, 133, 124);
-    --quinary-color: #f6f8fa;
-    --senary-color: #f6f8fa;
-    --septenary-color: #f6f8fa;
-    --octonary-color: #f6f8fa;
-    --nonary-color: #f6f8fa;
-    --denary-color: #f6f8fa;
+    --primary-color: #ffffff;
+    --secondary-color: #14213d;
+    --tertiary-color: #333333;
+    --quaternary-color: #219ebc;
 
     --font-color-light: #f6f8fa;
-    --font-color-dark: black;
+    --font-color-dark: #333333;
 }
 
 * {
@@ -83,15 +77,13 @@ main {
     }
 }
 
-a:link {
+a {
     color: var(--quaternary-color);
-}
-
-a:visited {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover {
+    filter: brightness(1.2);
     text-decoration: underline;
 }
 

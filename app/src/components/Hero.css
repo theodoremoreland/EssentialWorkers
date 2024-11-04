@@ -11,7 +11,7 @@
 
     background-image: url("../assets/images/essential-worker.jpg");
     background-attachment: fixed;
-    background-position: 53% 0%;
+    background-position: 30% 0%;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -35,7 +35,7 @@
     align-items: center;
     width: 45%;
     height: 100%;
-    background-color: #1b375dc9;
+    background-color: rgb(from var(--secondary-color) r g b / 80%);
     color: var(--font-color-light);
     font-size: 0.9rem;
     font-weight: 900;
@@ -45,6 +45,7 @@
 
     @media screen and (min-width: 768px) {
         & {
+            width: 40%;
             font-size: 1.3rem;
         }
     }
@@ -52,6 +53,12 @@
     @media screen and (min-width: 1024px) {
         & {
             font-size: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        & {
+            width: 33%;
         }
     }
 }

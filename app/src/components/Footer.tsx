@@ -49,13 +49,13 @@ const Footer = (): ReactElement => {
                 >
                     GDP and Personal Income 2018
                 </a>
-                ).{" "}
+                ) -{" "}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://github.com/stlrda/essential-workers/blob/master/data/stlrda-essential-workers-data.zip?raw=true"
                 >
-                    Download the data collected
+                    download the data collected
                 </a>
                 .
             </p>
