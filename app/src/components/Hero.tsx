@@ -5,17 +5,17 @@ import { ReactElement } from "react";
 import "./Hero.css";
 
 const Hero = (): ReactElement => {
-	return (
-		<div id="hero">
-			<h1>
-				Essential Workers (Remixed):
-				<br />
-				Demographics across Saint Louis,
-				<br />
-				Missouri, and Illinois
-			</h1>
-		</div>
-	);
+    return (
+        <div id="hero">
+            <h1>
+                Essential Workers (Remixed):
+                <br />
+                Demographics across Saint Louis,
+                <br />
+                Missouri, and Illinois
+            </h1>
+        </div>
+    );
 };
 
 export default Hero;
