@@ -35,7 +35,7 @@ const Footer = (): ReactElement => {
                     rel="noopener noreferrer"
                     href="https://data.census.gov/mdat/#/search?ds=ACSPUMS5Y2018"
                 >
-                    Amercian Community Survey 5-year Estimates Public Use
+                    American Community Survey 5-year Estimates Public Use
                     Microdata Sample 2018
                 </a>
                 ) and the Bureau of Economic Analysis (
