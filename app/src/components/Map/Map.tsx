@@ -214,7 +214,7 @@ const MapWrapper = (): ReactElement => {
 			style: "mapbox://styles/mapbox/light-v10",
 			center: [initialLng, initialLat],
 			zoom: initialZoom,
-			minZoom: 5,
+			minZoom: 3,
 			minPitch: 0,
 			maxPitch: 0,
 			doubleClickZoom: false,
