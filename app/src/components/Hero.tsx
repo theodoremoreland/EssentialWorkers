@@ -8,7 +8,7 @@ const Hero = (): ReactElement => {
     return (
         <div id="hero">
             <h1>
-                Essential Workers (Remixed):
+                Essential Workers:
                 <br />
                 Demographics across Saint Louis,
                 <br />
