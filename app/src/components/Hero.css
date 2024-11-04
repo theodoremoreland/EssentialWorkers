@@ -3,12 +3,25 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 
     width: 100%;
     height: 45vh;
     min-height: 200px;
     max-height: 900px;
+    width: 100%;
+    height: 45vh;
+    min-height: 200px;
+    max-height: 900px;
 
+    background-image: url("../assets/images/essential-worker.jpg");
+    background-attachment: fixed;
+    background-position: 30% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url("../assets/images/essential-worker.jpg");
     background-attachment: fixed;
     background-position: 30% 0%;
@@ -50,7 +63,26 @@
     font-family: stylish-bold;
     text-align: left;
     padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    background-color: rgb(from var(--secondary-color) r g b / 80%);
+    color: var(--font-color-light);
+    font-size: 0.9rem;
+    font-weight: 900;
+    font-family: stylish-bold;
+    text-align: left;
+    padding-left: 2%;
 
+    @media screen and (min-width: 768px) {
+        & {
+            width: 40%;
+            font-size: 1.3rem;
+        }
+    }
     @media screen and (min-width: 768px) {
         & {
             width: 40%;

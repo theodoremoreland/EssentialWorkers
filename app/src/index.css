@@ -1,82 +1,90 @@
 @font-face {
-	font-family: stylish-bold;
-	src: url("./assets/fonts/Comfortaa-Bold.ttf");
+    font-family: stylish-bold;
+    src: url("./assets/fonts/Comfortaa-Bold.ttf");
 }
 
 @font-face {
-	font-family: stylish-regular;
-	src: url("./assets/fonts/Comfortaa-Regular.ttf");
+    font-family: stylish-regular;
+    src: url("./assets/fonts/Comfortaa-Regular.ttf");
 }
 
 @font-face {
-	font-family: super-legible-regular;
-	src: url("./assets/fonts/OpenSans-Regular.ttf");
+    font-family: super-legible-regular;
+    src: url("./assets/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
-	font-family: stylish-light;
-	src: url("./assets/fonts/Comfortaa-Light.ttf");
+    font-family: stylish-light;
+    src: url("./assets/fonts/Comfortaa-Light.ttf");
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #14213d;
+    --tertiary-color: #333333;
+    --quaternary-color: #219ebc;
+
+    --font-color-light: #f6f8fa;
+    --font-color-dark: #333333;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	font-family: stylish-regular;
+    font-family: stylish-regular;
 }
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 main {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 3rem;
-	width: 100%;
-	padding: 74px 0;
-	margin: 0;
-	background-color: #f6f8fa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    padding: 74px 0;
+    margin: 0;
+    background-color: var(--primary-color);
 
-	> section {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-end;
-		width: 100%;
-		padding: 0 5%;
-		margin: 0;
+    > section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        padding: 0 5%;
+        margin: 0;
 
-		@media screen and (min-width: 768px) {
-			& {
-				padding: 0 5% 0 15%;
-			}
-		}
+        @media screen and (min-width: 768px) {
+            & {
+                padding: 0 5% 0 15%;
+            }
+        }
 
-		h2 {
-			font-size: 1.5rem;
-			width: 100%;
-		}
-	}
+        h2 {
+            font-size: 1.5rem;
+            width: 100%;
+        }
+    }
 }
 
-a:link {
-	color: rgb(0, 133, 124);
-}
-
-a:visited {
-	text-decoration: underline;
+a {
+    color: var(--quaternary-color);
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    filter: brightness(1.2);
+    text-decoration: underline;
 }
 
 h1,
@@ -85,17 +93,17 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
+    margin: 0;
 }
 
 p,
 ul {
-	width: 100%;
-	font-size: 1.1rem;
-	line-height: 1.4;
-	margin: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0;
 }
 
 p {
-	padding: 0;
+    padding: 0;
 }

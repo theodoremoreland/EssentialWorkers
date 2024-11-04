@@ -1,10 +1,6 @@
 // React
 import { ReactElement } from "react";
 
-// Images
-import rdaLogo from "../assets/images/RDA-Primary-Logo.png";
-import daughertyLogo from "../assets/images/Daugherty_Logo.png";
-
 // Styles
 import "./Footer.css";
 
@@ -12,7 +8,15 @@ const Footer = (): ReactElement => {
     return (
         <footer>
             <p>
-                The Essential Workers project was developed by the{" "}
+                The{" "}
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/stlrda/essential-workers"
+                >
+                    Essential Workers project
+                </a>{" "}
+                was originally developed by the{" "}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -28,8 +32,7 @@ const Footer = (): ReactElement => {
                 >
                     Daugherty Business Solutions
                 </a>
-                . The data used in this project was collected from the Census
-                Bureau (
+                . The data used was collected from the Census Bureau (
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -46,21 +49,16 @@ const Footer = (): ReactElement => {
                 >
                     GDP and Personal Income 2018
                 </a>
-                ). All of the data collected can be downloaded by clicking on
-                the "Download Data" button to the right of the navigation bar.
+                ) -{" "}
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/stlrda/essential-workers/blob/master/data/stlrda-essential-workers-data.zip?raw=true"
+                >
+                    download the data collected
+                </a>
+                .
             </p>
-            <div className="logo-container">
-                <img
-                    src={rdaLogo}
-                    className="logo"
-                    alt="Regional Data Alliance Logo"
-                />
-                <img
-                    src={daughertyLogo}
-                    className="logo"
-                    alt="Daugherty Business Solutions Logo"
-                />
-            </div>
         </footer>
     );
 };

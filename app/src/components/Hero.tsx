@@ -10,9 +10,9 @@ const Hero = (): ReactElement => {
             <h1>
                 Essential Workers:
                 <br />
-                Demographics across Missouri,
+                Demographics across Saint Louis,
                 <br />
-                Illinois, and Saint Louis
+                Missouri, and Illinois
             </h1>
         </div>
     );
