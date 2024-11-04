@@ -1,11 +1,18 @@
 #legend-area-container {
     z-index: 10;
     position: relative;
-    margin: 20px 0 0 20px;
-    min-width: 22.5%;
+    margin: 6px 0 0 6px;
+    min-width: 21%;
     height: 26rem;
     max-height: 90%;
     overflow-y: auto;
+
+    @media screen and (min-width: 1190px) {
+        & {
+            min-width: 23%;
+            margin: 20px 0 0 20px;
+        }
+    }
 }
 
 #legend-area {
