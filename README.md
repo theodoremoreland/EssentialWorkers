@@ -7,10 +7,10 @@
 ## Table of contents
 
 [View the application](https://master.d1gzfx9o22abaw.amplifyapp.com/)
+[View the original codebase](https://github.com/stlrda/essential-workers)
 
 -   [Overview](#overview)
 -   [Technologies used](#technologies-used)
--   [Screenshots](#screenshots)
 
 ## Overview
 
@@ -46,5 +46,3 @@ I was one of a few developers on the original project. It was actually my first 
 -   MapBox
 -   Docker
 -   Vite
-
-## Screenshots
