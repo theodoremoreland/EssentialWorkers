@@ -6,6 +6,9 @@
 	label {
 		font-family: stylish-bold;
 		color: rgb(0, 30, 71);
+		padding: 0 5px;
+		background-color: white;
+		border-radius: 5px;
 	}
 
 	.MuiSelect-select {
