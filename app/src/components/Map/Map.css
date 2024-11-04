@@ -24,13 +24,14 @@ div#map-container-wrapper {
         justify-content: flex-start;
         align-items: flex-end;
         gap: 1rem;
-        margin: 20px 20px 0 0;
+        margin: 11px 6px 0 0;
 
         @media screen and (min-width: 1190px) {
             & {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+                margin: 20px 20px 0 0;
             }
         }
     }
