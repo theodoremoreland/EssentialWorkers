@@ -1,11 +1,11 @@
 .Dropdown-container {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
     label {
         font-family: stylish-bold;
-        color: rgb(0, 30, 71);
+        color: var(--secondary-color);
         padding: 0 5px;
         background-color: white;
         border-radius: 5px;

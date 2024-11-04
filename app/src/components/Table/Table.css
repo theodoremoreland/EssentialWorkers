@@ -35,21 +35,21 @@
 
         tr:nth-child(1) {
             background-color: #727272;
-            color: whitesmoke;
+            color: var(--font-color-light);
         }
 
         tr {
             &:hover {
                 cursor: pointer;
-                color: white;
+                color: var(--font-color-light);
                 background-color: black;
             }
         }
 
         tr.group-header {
             font-family: stylish-light;
-            background-color: #1b365d !important;
-            color: whitesmoke !important;
+            background-color: var(--secondary-color) !important;
+            color: var(--font-color-light) !important;
         }
 
         tr.group-header .center {
