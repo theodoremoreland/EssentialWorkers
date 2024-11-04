@@ -2,7 +2,10 @@
 	z-index: 10;
 	position: relative;
 	margin: 20px 0 0 20px;
-	min-width: 18%;
+	min-width: 20%;
+	height: 26rem;
+	max-height: 90%;
+	overflow-y: auto;
 }
 
 #legend-area {
