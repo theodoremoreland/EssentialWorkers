@@ -1,25 +1,24 @@
-.MuiAppBar-colorPrimary {
-	background-color: #ffffff !important;
+nav#app-nav {
+    z-index: 1100;
+    position: sticky;
+    top: 0;
+    left: auto;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 64px;
+    padding: 0 25px;
+    background-color: #ffffff !important;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
 .nav-button {
-	font-family: stylish-light !important;
-	padding: 5px;
-	position: absolute;
-	left: calc(100vw - 500px);
-	color: #1b365d !important;
-}
-
-@media screen and (max-width: 768px) {
-	#logo {
-		width: 75%;
-		height: auto;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	.nav-button {
-		left: auto;
-		right: 0;
-	}
+    font-family: stylish-light !important;
+    padding: 5px;
+    color: #1b365d !important;
 }
