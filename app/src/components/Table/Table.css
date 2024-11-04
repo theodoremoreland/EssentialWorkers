@@ -1,55 +1,75 @@
 .Table {
-	position: relative;
-	width: 100%;
-	font-size: 0.8rem;
-	border-collapse: collapse;
+    position: relative;
+    width: 100%;
+    font-size: 0.8rem;
+    border-collapse: collapse;
 
-	thead th {
-		text-align: left;
-		vertical-align: bottom;
-		padding: 0.6rem 0.3rem;
-		border-bottom: 2px solid #dee2e6;
-	}
+    thead th {
+        text-align: left;
+        vertical-align: bottom;
+        padding: 0.6rem 0.3rem;
+        border-bottom: 2px solid #dee2e6;
+    }
 
-	tfoot th {
-		text-align: left;
-		vertical-align: top;
-		padding: 0.6rem 0.3rem;
-		border-top: 2px solid #dee2e6;
-	}
+    tfoot th {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.6rem 0.3rem;
+        border-top: 2px solid #dee2e6;
+    }
 
-	td {
-		padding: 0.6rem 0.3rem;
-		font-weight: 300;
-		vertical-align: top;
-	}
+    td {
+        padding: 0.6rem 0.3rem;
+        font-weight: 300;
+        vertical-align: top;
+    }
 
-	tbody {
-		tr:nth-child(odd) {
-			background-color: #f8f9fa;
-		}
+    tbody {
+        tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
 
-		tr:nth-child(even) {
-			background-color: #f1f3f5;
-		}
+        tr:nth-child(even) {
+            background-color: #f1f3f5;
+        }
 
-		tr:nth-child(1) {
-			background-color: #727272;
-			color: whitesmoke;
-		}
+        tr:nth-child(1) {
+            background-color: #727272;
+            color: whitesmoke;
+        }
 
-		tr {
-			&:hover {
-				cursor: pointer;
-				color: white;
-				background-color: black;
-			}
-		}
+        tr {
+            &:hover {
+                cursor: pointer;
+                color: white;
+                background-color: black;
+            }
+        }
 
-		tr.group-header {
-			font-family: stylish-light;
-			background-color: #1b365d !important;
-			color: whitesmoke !important;
-		}
-	}
+        tr.group-header {
+            font-family: stylish-light;
+            background-color: #1b365d !important;
+            color: whitesmoke !important;
+        }
+
+        tr.group-header .center {
+            user-select: none;
+            color: transparent;
+
+            @media screen and (min-width: 768px) {
+                user-select: auto;
+                color: inherit;
+            }
+        }
+
+        tr.group-header .left {
+            user-select: auto;
+            color: inherit;
+
+            @media screen and (min-width: 768px) {
+                user-select: none;
+                color: transparent;
+            }
+        }
+    }
 }

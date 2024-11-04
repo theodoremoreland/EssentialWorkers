@@ -65,11 +65,11 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
+                    <td className="left">Full Time</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td>Full Time</td>
+                    <td className="center">Full Time</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -85,11 +85,11 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
+                    <td className="left">Race/Ethnicity</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td>Race/Ethnicity</td>
+                    <td className="center">Race/Ethnicity</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -105,11 +105,11 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
+                    <td className="left">Education Level</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td>Education Level</td>
+                    <td className="center">Education Level</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -125,11 +125,11 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
+                    <td className="left">Compensation and Benefits</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td>Compensation and Benefits</td>
+                    <td className="center">Compensation and Benefits</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -148,11 +148,11 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
+                    <td className="left">Family Responsibilities</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td>Family Responsibilities</td>
+                    <td className="center">Family Responsibilities</td>
                     <td></td>
                     <td></td>
                     <td></td>
