@@ -22,13 +22,18 @@ const App = (): ReactElement => {
             <main>
                 <section id="intro" className="vertical-items">
                     <p>
-                        Essential workers are shouldering the responsibility of
-                        providing fundamental products and services during the
-                        COVID-19 pandemic all while being at especially high
-                        risk for exposure to the virus. This webpage is
-                        dedicated to helping others garner insight into the
-                        economic climate surrounding more than 2,000,000
-                        essential workers across Missouri and Illinois.
+                        Essential workers are undertaking the vital
+                        responsibility of providing essential products and
+                        services throughout the COVID-19 pandemic. Despite the
+                        increased risk of exposure to the virus, these workers
+                        continue to perform their duties to ensure the
+                        community's needs are met. This webpage is dedicated to
+                        offering a comprehensive understanding of the economic
+                        conditions impacting more than 2,000,000 essential
+                        workers in Saint Louis, Missouri and Illinois. By
+                        exploring this information, we aim to shed light on the
+                        challenges and contributions of these indispensable
+                        individuals.
                     </p>
                     <p>
                         The interactive map below features county level data on
@@ -127,8 +132,8 @@ const App = (): ReactElement => {
                 <section id="methodology" className="vertical-items">
                     <h2>Methodology</h2>
                     <p>
-                        In generalizing frontline/essential industries, we took
-                        inspiration from the{" "}
+                        In generalizing frontline/essential industries,
+                        inspiration was took from the{" "}
                         <a
                             target="_blank"
                             href="https://cepr.net/a-basic-demographic-profile-of-workers-in-frontline-industries/"

@@ -19,9 +19,9 @@
     position: absolute;
     margin: 0;
     padding: 5px;
-    color: rgb(99, 98, 98);
+    color: var(--font-color-dark);
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -47,7 +47,7 @@
 
 .legend-title {
     font-family: stylish-bold;
-    color: rgb(0, 30, 71);
+    color: var(--secondary-color);
     margin-bottom: 1%;
 }
 

@@ -37,15 +37,15 @@ const data: {
 };
 
 const palette: string[] = [
-    "#ffffd9",
-    "#edf8b1",
-    "#c7e9b4",
-    "#7fcdbb",
-    "#41b6c4",
-    "#1d91c0",
-    "#225ea8",
-    "#253494",
-    "#081d58",
+    "#ece7f2",
+    "#deebf7",
+    "#c6dbef",
+    "#9ecae1",
+    "#6baed6",
+    "#4292c6",
+    "#2171b5",
+    "#08519c",
+    "#08306b",
 ];
 
 const legendData: {
@@ -212,7 +212,7 @@ const MapWrapper = (): ReactElement => {
 
         const map: Map = new mapboxgl.Map({
             container: mapContainerRef.current,
-            style: "mapbox://styles/mapbox/light-v10",
+            style: "mapbox://styles/mapbox/dark-v10",
             center: [initialLng, initialLat],
             zoom: initialZoom,
             minZoom: 3,
