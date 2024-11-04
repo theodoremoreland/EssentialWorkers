@@ -2,11 +2,11 @@
 
 <img src="/presentation/thumbnail.webp" width="650">
 
-[View the application](https://master.dsexgnsfjzs36.amplifyapp.com/)
+[View the application](https://master.d1gzfx9o22abaw.amplifyapp.com/)
 
 ## Table of contents
 
-[View the application](https://master.dsexgnsfjzs36.amplifyapp.com/)
+[View the application](https://master.d1gzfx9o22abaw.amplifyapp.com/)
 
 -   [Overview](#overview)
 -   [Technologies used](#technologies-used)
