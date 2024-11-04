@@ -31,10 +31,10 @@ I was one of a few developers on the original project. It was actually my first 
 -   Migrated from `CRA` to `Vite` for faster build times
 -   Removed deprecated `mdbreactbootstrap` library and replaced with default HTML table elements
 -   Removed deprecated `Material UI` components in favor of `MUI` components
--   Removed any layout base uses of `Material UI` in favor of custom CSS
+-   Removed any layout based uses of `Material UI` in favor of custom CSS
 -   Now uses `TypeScript`
 -   Refactors to every file for improved DX
--   General redesign relating to colors, font families, and removal of branding
+-   General redesign relating to colors, wording, and removal of branding
 
 ## Technologies used
 
