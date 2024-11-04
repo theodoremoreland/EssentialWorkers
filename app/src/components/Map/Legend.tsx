@@ -23,15 +23,8 @@ const Legend = (props: Props): ReactElement => {
     return (
         <div id="legend-area-container">
             <div id="legend-area">
-                <h6 className="legend-title" style={{ marginBottom: "1%" }}>
-                    Legend
-                </h6>
-                <h6
-                    className="legend-descriptionz"
-                    style={{ marginBottom: "2%" }}
-                >
-                    {description}
-                </h6>
+                <h6 className="legend-title">Legend</h6>
+                <h6 className="legend-description">{description}</h6>
                 {stops.map((_, index: number) => (
                     <div key={stopLabels[index]} className="legend">
                         <div key={stopLabels[index]} className="legend-values">
