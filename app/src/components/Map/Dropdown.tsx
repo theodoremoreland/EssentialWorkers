@@ -8,7 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 // Styles
-import "./Select.css";
+import "./Dropdown.css";
 
 interface Props {
     label: string;

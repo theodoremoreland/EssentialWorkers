@@ -9,7 +9,7 @@ import mapboxgl, { GeoJSONFeature, Map, Popup } from "mapbox-gl";
 import { GeographyName } from "../../App.controller";
 
 // Components
-import Dropdown from "./Select";
+import Dropdown from "./Dropdown";
 import Legend from "./Legend";
 import Tooltip from "./Tooltip";
 
