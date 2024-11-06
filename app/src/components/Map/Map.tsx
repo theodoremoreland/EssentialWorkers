@@ -1,6 +1,6 @@
 // React
 import { useRef, useEffect, useState, ReactElement } from "react";
-import ReactDOM from "react-dom";
+import { createRoot, Root } from "react-dom/client";
 
 // Mapbox
 import mapboxgl, { GeoJSONFeature, Map, Popup } from "mapbox-gl";
@@ -245,7 +245,8 @@ const MapWrapper = (): ReactElement => {
                 const tooltipNode: HTMLDivElement =
                     document.createElement("div");
 
-                ReactDOM.render(<Tooltip feature={feature} />, tooltipNode);
+                const root: Root = createRoot(tooltipNode);
+                root.render(<Tooltip feature={feature} />);
 
                 // Set tooltip on map
                 tooltipRef.current
