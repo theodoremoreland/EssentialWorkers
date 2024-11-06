@@ -26,6 +26,7 @@ I was one of a few developers on the original project back in 2020. At the time,
 -   Correct bug with `MapBox` implementation that resulted in needless re-renders
 -   Streamlined styling logic resulting in less code, improved responsiveness, and better performance
 -   Updated codebase to `React` 18
+-   Updated `mapbox-gl` to `^3.7.0`
 -   Migrated from `CRA` to `Vite` for faster build times
 -   Removed deprecated `mdbreactbootstrap` library and replaced with default HTML table elements
 -   Removed deprecated `Material UI` components in favor of `MUI` components
