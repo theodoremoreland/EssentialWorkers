@@ -27,7 +27,7 @@ I was one of a few developers on the original project back in 2020. At the time,
 -   Corrected bugs with data and data tables that resulted in inaccurate values in columns and rows
 -   Correct bug with `MapBox` implementation that resulted in needless re-renders
 -   Streamlined styling logic resulting in less code, improved responsiveness, and better performance
--   Updated codebase to `React` 18
+-   Updated `React` from `^16.13.1` to `^18.3.1` 
 -   Updated `mapbox-gl` from `^1.12.0` to `^3.7.0`
 -   Migrated from `CRA` to `Vite` for faster build times
 -   Removed deprecated `mdbreact` and `react-data-table-component` libraries and replaced with default HTML table elements
