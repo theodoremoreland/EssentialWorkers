@@ -32,14 +32,27 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: stylish-regular;
-}
-
 html,
 body {
     margin: 0;
     padding: 0;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: stylish-regular;
+    width: 100%;
+
+    @media screen and (min-width: 2161px) {
+        background-color: black;
+    }
+}
+
+body {
+    max-width: 2160px;
 }
 
 main {
