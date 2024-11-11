@@ -50,6 +50,7 @@
     font-family: stylish-bold;
     text-align: left;
     padding-left: 2%;
+    padding-right: 2%;
 
     @media screen and (min-width: 768px) {
         & {
