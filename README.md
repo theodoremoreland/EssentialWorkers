@@ -38,6 +38,7 @@ I was one of a few developers on the original project back in 2020. At the time,
 -   Refactors to every file for improved DX
 -   Replaced hero image
 -   General redesign relating to colors, wording, and removal of branding
+-   Added favicon
 
 ## Technologies used
 
