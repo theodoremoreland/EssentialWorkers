@@ -36,15 +36,6 @@ export interface TableRow {
     "Childcare & Social Services": string | number;
 }
 
-export const map_summary = {
-    [GeographyName.Missouri]:
-        "Taney County has the highest Frontline rate (73.92%). Unemployment rates increase as you move south east.",
-    [GeographyName.Illinois]:
-        "DuPage County has the highest Frontline rate (48.95%). Unemployment rates increase as you move south.",
-    [GeographyName["Saint Louis"]]:
-        "Jersey County has the lowest Frontline rate (17.88%).",
-};
-
 const formatRow = (row: RawRow): TableRow => {
     if (row.index === "All Workers (16+)") {
         return {
