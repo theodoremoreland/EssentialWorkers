@@ -24,6 +24,14 @@ import "./Map.css";
 // Token
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
+enum Measure {
+    GDP = "GDP (Thousands of dollars)",
+    LaborForce = "Labor Force",
+    UnemploymentRate = "Unemployment Rate",
+    MedianIncome = "Median Income Essential Workers",
+    FrontlineIndustryRate = "Frontline Industry Rate",
+}
+
 const stl_counties = JSON.parse(stl_counties_raw);
 const mo_counties = JSON.parse(mo_counties_raw);
 const il_counties = JSON.parse(il_counties_raw);
@@ -56,7 +64,7 @@ const legendData: {
         description: string;
     };
 } = {
-    "GDP (Thousands of dollars)": {
+    [Measure.GDP]: {
         stops: [
             64_000, 2_400_000, 7_000_000, 16_000_000, 32_000_000, 47_000_000,
             67_000_000, 91_000_000, 411_000_000,
@@ -75,7 +83,7 @@ const legendData: {
         palette,
         description: "Gross Domestic Product in US Dollars (2018)",
     },
-    "Labor Force": {
+    [Measure.LaborForce]: {
         stops: [
             940, 14_000, 44_000, 100_000, 170_000, 280_000, 380_000, 500_000,
             2_000_000,
@@ -94,7 +102,7 @@ const legendData: {
         palette,
         description: "Sum of individuals in Labor Force (2018)",
     },
-    "Unemployment Rate": {
+    [Measure.UnemploymentRate]: {
         stops: [2, 3, 4, 5, 6, 7, 8, 10, 15].map((stop, index) => [
             stop,
             palette[index],
@@ -113,7 +121,7 @@ const legendData: {
         palette,
         description: "Percentage of individuals that are unemployed (2018)",
     },
-    "Median Income Essential Workers": {
+    [Measure.MedianIncome]: {
         stops: [
             20_000, 25_000, 30_000, 32_000, 35_000, 38_000, 40_000, 44_000,
             50_000,
@@ -132,7 +140,7 @@ const legendData: {
         palette,
         description: "Median Income in US Dollars (2018)",
     },
-    "Frontline Industry Rate": {
+    [Measure.FrontlineIndustryRate]: {
         stops: [2, 10, 15, 20, 25, 30, 40, 45, 70].map((stop, index) => [
             stop,
             palette[index],
@@ -170,7 +178,7 @@ const initialLat: number = mapViews[initialSelectedGeography].center[1];
 const initialZoom: number = mapViews[initialSelectedGeography].zoom;
 const initialSourceData: GeoJSON.FeatureCollection =
     data[initialSelectedGeography];
-const initialMeasure: string = "GDP (Thousands of dollars)";
+const initialMeasure: string = Measure.GDP;
 const initialDataLayer: {
     id: string;
     type: "fill";
