@@ -41,7 +41,6 @@
 
         tr {
             &:hover {
-                cursor: pointer;
                 color: var(--font-color-light);
                 background-color: black;
             }
