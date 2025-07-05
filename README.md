@@ -2,7 +2,7 @@
 
 <img src="/presentation/thumbnail.webp" width="650">
 
-[View the application](https://master.d1gzfx9o22abaw.amplifyapp.com/)
+[View the application](https://essential-workers.theodoremoreland.dev)
 
 ## Table of contents
 
