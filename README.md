@@ -1,5 +1,7 @@
 # Essential Workers
 
+An interactive map and data tables displaying 2018 demographic data including metrics like media income, GDP, and unemployment rates across Saint Louis, Missouri, and Illinois.
+
 <img src="/presentation/thumbnail.webp" width="650">
 
 [View the application](https://essential-workers.theodoremoreland.dev)
@@ -16,7 +18,7 @@
 
 ## Overview
 
-An analysis for essential workers in Saint Louis, Missouri, and Illinois.
+An analysis for essential workers in Saint Louis, Missouri, and Illinois. Results are then displayed on an interactive map (via Mapbox) and various data tables.
 
 This repository is a _detached fork_, update, and redesign to `Saint Louis Regional Data Alliance's` [essential-workers](https://github.com/stlrda/essential-workers), which is a webpage illustrating demographic profiles (2018) of essential workers across Saint Louis, Missouri, and Illinois.
 
