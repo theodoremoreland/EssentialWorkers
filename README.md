@@ -1,6 +1,6 @@
 # Essential Workers
 
-An interactive map and data tables displaying 2018 demographic data including metrics like media income, GDP, and unemployment rates across Saint Louis, Missouri, and Illinois.
+An interactive map and data tables displaying 2018 demographic data including metrics like median income, GDP, and unemployment rates across Saint Louis, Missouri, and Illinois.
 
 <img src="/presentation/thumbnail.webp" width="650">
 
