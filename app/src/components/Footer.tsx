@@ -1,30 +1,30 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Styles
-import "./Footer.css";
+import './Footer.css';
 
 const Footer = (): ReactElement => {
     return (
         <footer>
             <p>
-                The{" "}
+                The{' '}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://github.com/stlrda/essential-workers"
                 >
                     Essential Workers project
-                </a>{" "}
-                was originally developed by the{" "}
+                </a>{' '}
+                was originally developed by the{' '}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="http://stldata.org"
                 >
-                    St. Louis Regional Data Alliance{" "}
+                    St. Louis Regional Data Alliance{' '}
                 </a>
-                in partnership with{" "}
+                in partnership with{' '}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const Footer = (): ReactElement => {
                 >
                     GDP and Personal Income 2018
                 </a>
-                ) -{" "}
+                ) -{' '}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"

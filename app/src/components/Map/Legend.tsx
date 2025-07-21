@@ -1,11 +1,11 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Material UI
-import StopIcon from "@mui/icons-material/Stop";
+import StopIcon from '@mui/icons-material/Stop';
 
 // Styles
-import "./Legend.css";
+import './Legend.css';
 
 interface Props {
     legendObj: {
@@ -28,7 +28,7 @@ const Legend = (props: Props): ReactElement => {
                     <div key={stopLabels[index]} className="legend">
                         <div key={stopLabels[index]} className="legend-values">
                             {stopLabels[index]}
-                        </div>{" "}
+                        </div>{' '}
                         <StopIcon
                             className="legend-colors"
                             style={{ color: palette[index] }}

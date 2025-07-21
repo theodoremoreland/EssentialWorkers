@@ -1,11 +1,11 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Custom
-import { TableRow } from "../../App.controller";
+import { TableRow } from '../../App.controller';
 
 // Styles
-import "./Table.css";
+import './Table.css';
 
 interface Props {
     id: string;
@@ -23,23 +23,23 @@ interface Props {
 const groupings: {
     [key: string]: string;
 } = {
-    "Full-time": "Full Time",
-    "Part-time": "Full Time",
-    White: "Race/Ethnicity",
-    Black: "Race/Ethnicity",
-    Hispanic: "Race/Ethnicity",
-    AAPI: "Race/Ethnicity",
-    Other: "Race/Ethnicity",
-    "Less than High School": "Education Level",
-    HS: "Education Level",
-    "Some college": "Education Level",
-    College: "Education Level",
-    Advanced: "Education Level",
-    "Below poverty line": "Compensation and Benefits",
-    "<200% poverty line": "Compensation and Benefits",
-    "No health insurance": "Compensation and Benefits",
-    "Child in home": "Family Responsibilities",
-    "Senior (age 65+) in home": "Family Responsibilities",
+    'Full-time': 'Full Time',
+    'Part-time': 'Full Time',
+    White: 'Race/Ethnicity',
+    Black: 'Race/Ethnicity',
+    Hispanic: 'Race/Ethnicity',
+    AAPI: 'Race/Ethnicity',
+    Other: 'Race/Ethnicity',
+    'Less than High School': 'Education Level',
+    HS: 'Education Level',
+    'Some college': 'Education Level',
+    College: 'Education Level',
+    Advanced: 'Education Level',
+    'Below poverty line': 'Compensation and Benefits',
+    '<200% poverty line': 'Compensation and Benefits',
+    'No health insurance': 'Compensation and Benefits',
+    'Child in home': 'Family Responsibilities',
+    'Senior (age 65+) in home': 'Family Responsibilities',
 };
 
 const Table = (props: Props): ReactElement => {
@@ -76,7 +76,7 @@ const Table = (props: Props): ReactElement => {
                     <td></td>
                 </tr>
                 {tableData?.rows
-                    .filter((row) => groupings[row.index] === "Full Time")
+                    .filter((row) => groupings[row.index] === 'Full Time')
                     .map((row, index) => (
                         <tr key={index}>
                             {Object.entries(row).map(([, v], index) => (
@@ -96,7 +96,7 @@ const Table = (props: Props): ReactElement => {
                     <td></td>
                 </tr>
                 {tableData?.rows
-                    .filter((row) => groupings[row.index] === "Race/Ethnicity")
+                    .filter((row) => groupings[row.index] === 'Race/Ethnicity')
                     .map((row, index) => (
                         <tr key={index}>
                             {Object.entries(row).map(([, v], index) => (
@@ -116,7 +116,7 @@ const Table = (props: Props): ReactElement => {
                     <td></td>
                 </tr>
                 {tableData?.rows
-                    .filter((row) => groupings[row.index] === "Education Level")
+                    .filter((row) => groupings[row.index] === 'Education Level')
                     .map((row, index) => (
                         <tr key={index}>
                             {Object.entries(row).map(([, v], index) => (
@@ -138,7 +138,7 @@ const Table = (props: Props): ReactElement => {
                 {tableData?.rows
                     .filter(
                         (row) =>
-                            groupings[row.index] === "Compensation and Benefits"
+                            groupings[row.index] === 'Compensation and Benefits'
                     )
                     .map((row, index) => (
                         <tr key={index}>
@@ -161,7 +161,7 @@ const Table = (props: Props): ReactElement => {
                 {tableData?.rows
                     .filter(
                         (row) =>
-                            groupings[row.index] === "Family Responsibilities"
+                            groupings[row.index] === 'Family Responsibilities'
                     )
                     .map((row, index) => (
                         <tr key={index}>

@@ -1,21 +1,21 @@
 @font-face {
     font-family: stylish-bold;
-    src: url("./assets/fonts/Comfortaa-Bold.ttf");
+    src: url('./assets/fonts/Comfortaa-Bold.ttf');
 }
 
 @font-face {
     font-family: stylish-regular;
-    src: url("./assets/fonts/Comfortaa-Regular.ttf");
+    src: url('./assets/fonts/Comfortaa-Regular.ttf');
 }
 
 @font-face {
     font-family: super-legible-regular;
-    src: url("./assets/fonts/OpenSans-Regular.ttf");
+    src: url('./assets/fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
     font-family: stylish-light;
-    src: url("./assets/fonts/Comfortaa-Light.ttf");
+    src: url('./assets/fonts/Comfortaa-Light.ttf');
 }
 
 :root {

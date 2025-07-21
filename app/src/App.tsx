@@ -1,18 +1,18 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Components
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Map from "./components/Map/Map";
-import Table from "./components/Table/Table";
-import Footer from "./components/Footer";
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Map from './components/Map/Map';
+import Table from './components/Table/Table';
+import Footer from './components/Footer';
 
 // Controller
-import { tableRows, GeographyName } from "./App.controller";
+import { tableRows, GeographyName } from './App.controller';
 
 // Styles
-import "./App.css";
+import './App.css';
 
 const App = (): ReactElement => {
     return (
@@ -47,7 +47,7 @@ const App = (): ReactElement => {
                     <Map />
                 </section>
                 <section id="stl" className="table-summary vertical-items">
-                    <h2>{GeographyName["Saint Louis"]}</h2>
+                    <h2>{GeographyName['Saint Louis']}</h2>
                     <p>
                         <b>Table 1</b> shows a demographic profile of frontline
                         workers across Greater Saint Louis. For example, of
@@ -62,15 +62,15 @@ const App = (): ReactElement => {
                         tableData={{
                             columns: [
                                 ...Object.keys(
-                                    tableRows[GeographyName["Saint Louis"]][0]
+                                    tableRows[GeographyName['Saint Louis']][0]
                                 ).map((key) => {
                                     return {
-                                        label: key === "index" ? "" : key,
+                                        label: key === 'index' ? '' : key,
                                         field: key,
                                     };
                                 }),
                             ],
-                            rows: tableRows[GeographyName["Saint Louis"]],
+                            rows: tableRows[GeographyName['Saint Louis']],
                         }}
                     />
                 </section>
@@ -92,7 +92,7 @@ const App = (): ReactElement => {
                                     tableRows[GeographyName.Missouri][0]
                                 ).map((key) => {
                                     return {
-                                        label: key === "index" ? "" : key,
+                                        label: key === 'index' ? '' : key,
                                         field: key,
                                     };
                                 }),
@@ -120,7 +120,7 @@ const App = (): ReactElement => {
                                     tableRows[GeographyName.Illinois][0]
                                 ).map((key) => {
                                     return {
-                                        label: key === "index" ? "" : key,
+                                        label: key === 'index' ? '' : key,
                                         field: key,
                                     };
                                 }),
@@ -133,7 +133,7 @@ const App = (): ReactElement => {
                     <h2>Methodology</h2>
                     <p>
                         In generalizing frontline/essential industries,
-                        inspiration was took from the{" "}
+                        inspiration was took from the{' '}
                         <a
                             target="_blank"
                             href="https://cepr.net/a-basic-demographic-profile-of-workers-in-frontline-industries/"

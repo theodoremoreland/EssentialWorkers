@@ -1,18 +1,18 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Mapbox
-import { GeoJSONFeature } from "mapbox-gl";
+import { GeoJSONFeature } from 'mapbox-gl';
 
 // Utils
 import {
     formatAsLocaleNumber,
     formatAsPercentage,
     formatAsCurrency,
-} from "../../utils";
+} from '../../utils';
 
 // Styles
-import "./Tooltip.css";
+import './Tooltip.css';
 
 interface Props {
     feature: GeoJSONFeature;
@@ -20,7 +20,7 @@ interface Props {
 
 const Tooltip = ({ feature }: Props): ReactElement => {
     const { layer } = feature;
-    const hidden: boolean = layer?.id === "root-layer" ? false : true;
+    const hidden: boolean = layer?.id === 'root-layer' ? false : true;
 
     return (
         <div hidden={hidden}>
@@ -28,35 +28,35 @@ const Tooltip = ({ feature }: Props): ReactElement => {
                 <>
                     <div>County: {feature.properties.NAME}</div>
                     <div>
-                        GDP:{" "}
+                        GDP:{' '}
                         {formatAsCurrency(
-                            feature.properties["GDP (Thousands of dollars)"]
+                            feature.properties['GDP (Thousands of dollars)']
                         )}
                     </div>
                     <div>
-                        Labor Force:{" "}
+                        Labor Force:{' '}
                         {formatAsLocaleNumber(
-                            feature.properties["Labor Force"]
+                            feature.properties['Labor Force']
                         )}
                     </div>
                     <div>
-                        Unemployment:{" "}
+                        Unemployment:{' '}
                         {formatAsPercentage(
-                            feature.properties["Unemployment Rate"]
+                            feature.properties['Unemployment Rate']
                         )}
                     </div>
                     <div>
-                        Median Income:{" "}
+                        Median Income:{' '}
                         {formatAsCurrency(
                             feature.properties[
-                                "Median Income Essential Workers"
+                                'Median Income Essential Workers'
                             ]
                         )}
                     </div>
                     <div>
-                        Frontline Rate:{" "}
+                        Frontline Rate:{' '}
                         {formatAsPercentage(
-                            feature.properties["Frontline Industry Rate"]
+                            feature.properties['Frontline Industry Rate']
                         )}
                     </div>
                 </>

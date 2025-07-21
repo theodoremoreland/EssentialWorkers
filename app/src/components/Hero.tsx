@@ -1,8 +1,8 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Styles
-import "./Hero.css";
+import './Hero.css';
 
 const Hero = (): ReactElement => {
     return (

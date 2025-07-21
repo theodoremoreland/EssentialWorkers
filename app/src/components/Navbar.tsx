@@ -1,11 +1,11 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // Material UI
-import { Button } from "@mui/material";
+import { Button } from '@mui/material';
 
 // Styles
-import "./Navbar.css";
+import './Navbar.css';
 
 const Navbar = (): ReactElement => {
     return (

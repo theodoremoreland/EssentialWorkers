@@ -1,14 +1,14 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // MUI
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 // Styles
-import "./Dropdown.css";
+import './Dropdown.css';
 
 interface Props {
     label: string;
