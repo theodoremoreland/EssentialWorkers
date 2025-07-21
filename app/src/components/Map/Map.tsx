@@ -218,11 +218,13 @@ const MapWrapper = (): ReactElement => {
     useEffect(() => {
         if (mapContainerRef.current === null) return;
 
+        const isSmallScreen: boolean = window.innerWidth < 768;
+
         const map: Map = new mapboxgl.Map({
             container: mapContainerRef.current,
             style: 'mapbox://styles/mapbox/dark-v10',
             center: [initialLng, initialLat],
-            zoom: initialZoom,
+            zoom: isSmallScreen ? initialZoom - 2 : initialZoom,
             minZoom: 3,
             minPitch: 0,
             maxPitch: 0,
