@@ -14,7 +14,9 @@ footer {
         & {
             flex-direction: row;
             justify-content: flex-start;
-            padding: 2rem 5% 2rem 15%;
+            padding: var(--section-padding);
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
     }
 

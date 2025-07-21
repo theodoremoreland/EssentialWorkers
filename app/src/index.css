@@ -26,6 +26,20 @@
 
     --font-color-light: #f6f8fa;
     --font-color-dark: #333333;
+
+    --section-padding: 0 5% 0 15%;
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --section-padding: 0 18% 0 18%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    :root {
+        --section-padding: 0 26% 0 26%;
+    }
 }
 
 * {
@@ -45,10 +59,7 @@ html {
     justify-content: flex-start;
     align-items: center;
     font-family: stylish-regular;
-
-    @media screen and (min-width: 1920px) {
-        background-color: black;
-    }
+    background-color: black;
 }
 
 body {
@@ -79,7 +90,7 @@ main {
 
         @media screen and (min-width: 768px) {
             & {
-                padding: 0 5% 0 15%;
+                padding: var(--section-padding);
             }
         }
 
@@ -115,6 +126,21 @@ ul {
     font-size: 1.1rem;
     line-height: 1.4;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    p,
+    ul {
+        line-height: 1.6;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    p,
+    ul {
+        font-size: 1.2rem;
+        line-height: 1.75;
+    }
 }
 
 p {
