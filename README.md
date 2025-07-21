@@ -44,6 +44,7 @@ I was one of a few developers on the original project back in 2020. It was my fi
 -   Replaced hero image
 -   General redesign relating to colors, wording, and removal of branding
 -   Added favicon
+-   Implemented prettier auto formatting
 
 ## Technologies used
 
