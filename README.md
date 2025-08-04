@@ -10,11 +10,11 @@ An interactive map and data tables displaying 2018 demographic data including me
 
 [View the original codebase](https://github.com/stlrda/essential-workers)
 
--   [Overview](#overview)
--   [Technologies used](#technologies-used)
--   [Screenshots](#screenshots)
-    -   [Desktop](#desktop)
-    -   [Mobile](#mobile)
+- [Overview](#overview)
+- [Technologies used](#technologies-used)
+- [Screenshots](#screenshots)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile)
 
 ## Overview
 
@@ -24,39 +24,41 @@ This repository is a _detached fork_, update, and redesign to `Saint Louis Regio
 
 I was one of a few developers on the original project back in 2020. It was my first attempt at a professional webpage (React based or otherwise) and responsive design. The intention of this fork was to update the original in the following ways:
 
--   Updated layout (for simplicity, consistency between mobile and desktop, and overall UX)
--   Updated typography (improved consistency, contrast, and overall UX)
--   Fixed typos
--   Streamlined map controls for changing geography and measure (for improved consistency between mobile and desktop)
--   Formatted display of certain numbers (percentages, currencies, large numbers)
--   Corrected bugs with data and data tables that resulted in inaccurate values in columns and rows
--   Correct bug with `MapBox` implementation that resulted in needless re-renders
--   Streamlined styling logic resulting in less code, improved responsiveness, and better performance
--   Updated `React` from `^16.13.1` to `^18.3.1`
--   Updated `mapbox-gl` from `^1.12.0` to `^3.7.0`
--   Migrated from `CRA` to `Vite` for faster build times
--   Removed deprecated `mdbreact` and `react-data-table-component` libraries and replaced with default HTML table elements
--   Removed `react-map-gl` dependency
--   Removed deprecated `Material UI` components in favor of `MUI` components
--   Removed any layout based uses of `Material UI` in favor of custom CSS
--   Now uses `TypeScript`
--   Refactors to every file for improved DX
--   Replaced hero image
--   General redesign relating to colors, wording, and removal of branding
--   Added favicon
--   Implemented prettier auto formatting
+- Updated layout (for simplicity, consistency between mobile and desktop, and overall UX)
+- Updated typography (improved consistency, contrast, and overall UX)
+- Fixed typos
+- Streamlined map controls for changing geography and measure (for improved consistency between mobile and desktop)
+- Added toggle button for map legend. It defaults the legend to closed state (improves readability for medium to small screens)
+- Formatted display of certain numbers (percentages, currencies, large numbers)
+- Corrected bugs with data and data tables that resulted in inaccurate values in columns and rows
+- Correct bug with `MapBox` implementation that resulted in needless re-renders
+- Streamlined styling logic resulting in less code, improved responsiveness, and better performance
+- Updated `React` from `^16.13.1` to `^18.3.1`
+- Updated `mapbox-gl` from `^1.12.0` to `^3.7.0`
+- Migrated from `CRA` to `Vite` for faster build times
+- Removed deprecated `mdbreact` and `react-data-table-component` libraries and replaced with default HTML table elements
+- Table row headers are now suffixed with geography abbreviation (e.g. STL, IL, MO) to aid in distinguishing tables through scrolling
+- Removed `react-map-gl` dependency
+- Removed deprecated `Material UI` components in favor of `MUI` components
+- Removed any layout based uses of `Material UI` in favor of custom CSS
+- Now uses `TypeScript`
+- Refactors to every file for improved DX
+- Replaced hero image
+- General redesign relating to colors, wording, and removal of branding
+- Added favicon
+- Implemented prettier auto formatting
 
 ## Technologies used
 
--   TypeScript
--   JavaScript
--   React
--   HTML
--   CSS
--   Material UI (MUI)
--   MapBox
--   Docker
--   Vite
+- TypeScript
+- JavaScript
+- React
+- HTML
+- CSS
+- Material UI (MUI)
+- MapBox
+- Docker
+- Vite
 
 ## Screenshots
 
