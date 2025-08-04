@@ -9,6 +9,7 @@ import './Table.css';
 
 interface Props {
     id: string;
+    groupLabelSuffix: string;
     tableData:
         | {
               columns: {
@@ -43,7 +44,7 @@ const groupings: {
 };
 
 const Table = (props: Props): ReactElement => {
-    const { id, tableData } = props;
+    const { id, groupLabelSuffix, tableData } = props;
 
     return (
         <table id={id} className="Table">
@@ -65,11 +66,11 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
-                    <td className="left">Full Time</td>
+                    <td className="left">Full Time ({groupLabelSuffix})</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td className="center">Full Time</td>
+                    <td className="center">Full Time ({groupLabelSuffix})</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -85,11 +86,15 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
-                    <td className="left">Race/Ethnicity</td>
+                    <td className="left">
+                        Race/Ethnicity ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td className="center">Race/Ethnicity</td>
+                    <td className="center">
+                        Race/Ethnicity ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -105,11 +110,15 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
-                    <td className="left">Education Level</td>
+                    <td className="left">
+                        Education Level ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td className="center">Education Level</td>
+                    <td className="center">
+                        Education Level ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -125,11 +134,15 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
-                    <td className="left">Compensation and Benefits</td>
+                    <td className="left">
+                        Compensation and Benefits ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td className="center">Compensation and Benefits</td>
+                    <td className="center">
+                        Compensation and Benefits ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -148,11 +161,15 @@ const Table = (props: Props): ReactElement => {
                         </tr>
                     ))}
                 <tr className="group-header">
-                    <td className="left">Family Responsibilities</td>
+                    <td className="left">
+                        Family Responsibilities ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td className="center">Family Responsibilities</td>
+                    <td className="center">
+                        Family Responsibilities ({groupLabelSuffix})
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>

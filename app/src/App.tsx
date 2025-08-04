@@ -59,6 +59,7 @@ const App = (): ReactElement => {
                 <section className="table-section">
                     <Table
                         id="table-1"
+                        groupLabelSuffix="STL"
                         tableData={{
                             columns: [
                                 ...Object.keys(
@@ -86,6 +87,7 @@ const App = (): ReactElement => {
                 <section className="table-section">
                     <Table
                         id="table-2"
+                        groupLabelSuffix="MO"
                         tableData={{
                             columns: [
                                 ...Object.keys(
@@ -114,6 +116,7 @@ const App = (): ReactElement => {
                 <section className="table-section">
                     <Table
                         id="table-3"
+                        groupLabelSuffix="IL"
                         tableData={{
                             columns: [
                                 ...Object.keys(
