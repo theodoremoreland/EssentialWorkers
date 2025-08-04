@@ -27,7 +27,7 @@
     --font-color-light: #f6f8fa;
     --font-color-dark: #333333;
 
-    --section-padding: 0 5%;
+    --section-padding: 0 6%;
 }
 
 @media screen and (min-width: 1440px) {
