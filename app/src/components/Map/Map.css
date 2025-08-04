@@ -1,20 +1,31 @@
 div#map-container-wrapper {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     width: 100%;
-    height: 66vh;
+    height: 73vh;
     max-height: 1000px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 66vh;
-    max-height: 1000px;
+
+    .mapboxgl-ctrl-attrib,
+    .mapboxgl-ctrl-bottom-left {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        & {
+            height: 66vh;
+        }
+    }
+
+    @media screen and (min-width: 1190px) {
+        & {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
 
     #map-form {
         z-index: 10;
@@ -28,6 +39,7 @@ div#map-container-wrapper {
 
         @media screen and (min-width: 1190px) {
             & {
+                order: 1;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;

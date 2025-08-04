@@ -303,7 +303,6 @@ const MapWrapper = (): ReactElement => {
 
     return (
         <div id="map-container-wrapper">
-            <Legend legendObj={legendData[selectedMeasure]} />
             <form id="map-form">
                 <Dropdown
                     label="Geography"
@@ -326,6 +325,7 @@ const MapWrapper = (): ReactElement => {
                     }))}
                 />
             </form>
+            <Legend legendObj={legendData[selectedMeasure]} />
             <div id="map-container" ref={mapContainerRef} />
         </div>
     );

@@ -27,7 +27,7 @@ const Legend = (props: Props): ReactElement => {
         <div id="legend-area-container">
             <div id="legend-area">
                 <button
-                    className={`legend-button ${
+                    className={`legend-button top ${
                         isLegendOpen ? 'open' : 'closed'
                     }`}
                     onClick={() => setIsLegendOpen(!isLegendOpen)}
@@ -58,6 +58,19 @@ const Legend = (props: Props): ReactElement => {
                         ))}
                     </>
                 )}
+                <button
+                    className={`legend-button bottom ${
+                        isLegendOpen ? 'open' : 'closed'
+                    }`}
+                    onClick={() => setIsLegendOpen(!isLegendOpen)}
+                    aria-label="Toggle Legend"
+                >
+                    <span>{isLegendOpen ? 'Hide Legend' : 'Show Legend'}</span>
+                    <ChevronRight
+                        sx={{ fontSize: '1.3em' }}
+                        className="legend-chevron"
+                    />
+                </button>
             </div>
         </div>
     );
