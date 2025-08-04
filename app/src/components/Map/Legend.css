@@ -2,7 +2,7 @@
     z-index: 10;
     position: relative;
     margin: 6px 0 0 6px;
-    min-width: 28%;
+    min-width: 125px;
     height: 26rem;
     max-height: 90%;
     overflow-y: auto;
@@ -26,35 +26,11 @@
     margin: 0;
     padding: 10px 15px;
     color: var(--font-color-dark);
+    font-size: 0.6rem;
     text-align: center;
     background-color: var(--primary-color);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.legend {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0.6rem;
-
-    @media screen and (min-width: 1200px) {
-        & {
-            font-size: 0.8rem;
-        }
-    }
-
-    @media screen and (min-width: 1600px) {
-        & {
-            font-size: 1rem;
-        }
-    }
-}
-
-.legend-label {
-    color: var(--secondary-color);
-    font-family: stylish-regular;
-    font-size: 0.6rem;
 
     @media screen and (min-width: 720px) {
         & {
@@ -67,12 +43,19 @@
             font-size: 1rem;
         }
     }
+}
 
-    @media screen and (min-width: 1600px) {
-        & {
-            font-size: 1.2rem;
-        }
-    }
+.legend {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.legend-label {
+    color: var(--secondary-color);
+    font-family: stylish-regular;
+    font-size: 1em;
 }
 
 .legend-button {
@@ -84,7 +67,7 @@
     background-color: transparent;
     border: none;
     color: var(--secondary-color);
-    font-size: 1rem;
+    font-size: 1em;
     font-family: stylish-bold;
     cursor: pointer;
     padding: 8px 16px;
