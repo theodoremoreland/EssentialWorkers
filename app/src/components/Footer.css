@@ -19,9 +19,4 @@ footer {
             padding-bottom: 2rem;
         }
     }
-
-    p {
-        text-align: left;
-        max-width: 125ch;
-    }
 }
