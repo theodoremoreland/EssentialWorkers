@@ -29,8 +29,8 @@ const App = (): ReactElement => {
                         continue to perform their duties to ensure the
                         community's needs are met. This webpage is dedicated to
                         offering a comprehensive understanding of the economic
-                        conditions impacting more than 2,000,000 essential
-                        workers in Saint Louis, Missouri and Illinois. By
+                        conditions impacting more than 2 million essential
+                        workers in Saint Louis, Missouri, and Illinois. By
                         exploring this information, we aim to shed light on the
                         challenges and contributions of these indispensable
                         individuals.
