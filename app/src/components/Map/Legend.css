@@ -69,7 +69,7 @@
 
 .legend-label {
     color: var(--secondary-color);
-    font-family: stylish-regular;
+    font-family: stylish-regular, serif;
     font-size: 1em;
 }
 
@@ -84,7 +84,7 @@
     border: none;
     color: var(--secondary-color);
     font-size: 1em;
-    font-family: stylish-bold;
+    font-family: stylish-bold, serif;
     padding: 0;
     cursor: pointer;
 

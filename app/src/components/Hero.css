@@ -47,7 +47,7 @@
     color: var(--font-color-light);
     font-size: 0.9rem;
     font-weight: 900;
-    font-family: stylish-bold;
+    font-family: stylish-bold, serif;
     text-align: left;
     padding-left: 2%;
     padding-right: 2%;

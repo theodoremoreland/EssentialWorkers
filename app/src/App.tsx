@@ -9,7 +9,7 @@ import Table from './components/Table/Table';
 import Footer from './components/Footer';
 
 // Controller
-import { tableRows, GeographyName } from './App.controller';
+import { tableRows, GeographyName } from './App.data';
 
 // Styles
 import './App.css';

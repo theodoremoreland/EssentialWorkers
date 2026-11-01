@@ -32,7 +32,7 @@ const Footer = (): ReactElement => {
                 >
                     Daugherty Business Solutions
                 </a>
-                . The data used was collected from the Census Bureau (
+                {/* */}. The data used was collected from the Census Bureau (
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -41,7 +41,7 @@ const Footer = (): ReactElement => {
                     American Community Survey 5-year Estimates Public Use
                     Microdata Sample 2018
                 </a>
-                ) and the Bureau of Economic Analysis (
+                {/* */}) and the Bureau of Economic Analysis (
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -57,7 +57,7 @@ const Footer = (): ReactElement => {
                 >
                     download the data collected
                 </a>
-                .
+                {/* */}.
             </p>
         </footer>
     );

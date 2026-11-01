@@ -28,6 +28,6 @@ section.vertical-items {
 #methodology {
     p,
     ul {
-        font-family: super-legible-regular;
+        font-family: super-legible-regular, sans-serif;
     }
 }

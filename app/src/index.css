@@ -64,7 +64,7 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    font-family: stylish-regular;
+    font-family: stylish-regular, serif;
     background-color: black;
 }
 

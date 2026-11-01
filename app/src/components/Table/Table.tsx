@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 // Custom
-import { TableRow } from '../../App.controller';
+import { TableRow } from '../../App.data';
 
 // Styles
 import './Table.css';

@@ -5,7 +5,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
     label {
-        font-family: stylish-bold;
+        font-family: stylish-bold, serif;
         color: var(--secondary-color);
         padding: 0 5px;
         background-color: white;
@@ -13,7 +13,7 @@
     }
 
     .MuiSelect-select {
-        font-family: stylish-regular;
+        font-family: stylish-regular, serif;
     }
 
     .Dropdown {
