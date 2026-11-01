@@ -6,7 +6,7 @@ import { createRoot, Root } from 'react-dom/client';
 import mapboxgl, { GeoJSONFeature, Map, Popup } from 'mapbox-gl';
 
 // Custom
-import { GeographyName } from '../../App.controller';
+import { GeographyName } from '../../App.data';
 
 // Components
 import Dropdown from './Dropdown';

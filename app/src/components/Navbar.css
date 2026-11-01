@@ -25,7 +25,7 @@ nav#app-nav {
 }
 
 .nav-button {
-    font-family: stylish-light;
+    font-family: stylish-light, serif;
     padding: 5px;
     color: var(--secondary-color);
 }

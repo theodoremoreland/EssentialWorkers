@@ -5,7 +5,7 @@ footer {
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    font-family: stylish-light;
+    font-family: stylish-light, serif;
     padding: 2rem;
     color: var(--font-color-light);
     background-color: var(--tertiary-color);
