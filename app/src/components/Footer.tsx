@@ -20,19 +20,12 @@ const Footer = (): ReactElement => {
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="http://stldata.org"
+                    href="https://stldata.org"
                 >
                     St. Louis Regional Data Alliance{' '}
                 </a>
-                in partnership with{' '}
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="http://daugherty.com"
-                >
-                    Daugherty Business Solutions
-                </a>
-                {/* */}. The data used was collected from the Census Bureau (
+                in partnership with Daugherty Business Solutions. The data used
+                was collected from the Census Bureau (
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
